@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="fr" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Institut Passeport Français</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; }
+    :root{
+      --bg:#071a2f;
+      --surface:#0d2742;
+      --text:#ffffff;
+      --primary:#d4af37;
+      --secondary:#f6e7b0;
+    }
+    body{
+      font-family:'Manrope',sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior:smooth;
+    }
+    .font-display{
+      font-family:'Cormorant Garamond', Georgia, serif;
+      letter-spacing:0.01em;
+    }
+    .premium-bg{
+      background:
+        radial-gradient(circle at top right, rgba(212,175,55,0.18), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,0.08), transparent 22%),
+        linear-gradient(180deg, rgba(7,26,47,0.98), rgba(7,26,47,1));
+    }
+    .glass{
+      background: rgba(13,39,66,0.72);
+      backdrop-filter: blur(16px);
+      border:1px solid rgba(246,231,176,0.18);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    }
+    .gold-line{
+      position:relative;
+    }
+    .gold-line::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-10px;
+      width:76px;
+      height:1px;
+      background:linear-gradient(90deg, var(--primary), transparent);
+    }
+    .hero-overlay{
+      background:
+        linear-gradient(90deg, rgba(7,26,47,0.92) 0%, rgba(7,26,47,0.72) 46%, rgba(7,26,47,0.55) 100%),
+        linear-gradient(180deg, rgba(7,26,47,0.1), rgba(7,26,47,0.25));
+    }
+    .animate-rise{
+      opacity:0;
+      transform:translateY(22px);
+      animation:rise .9s ease forwards;
+    }
+    .animate-rise.delay-1{ animation-delay:.12s; }
+    .animate-rise.delay-2{ animation-delay:.24s; }
+    .animate-rise.delay-3{ animation-delay:.36s; }
+    .animate-rise.delay-4{ animation-delay:.48s; }
+    @keyframes rise{
+      to{ opacity:1; transform:translateY(0); }
+    }
+    .card-hover{
+      transition:transform .35s ease, border-color .35s ease, box-shadow .35s ease, background .35s ease;
+    }
+    .card-hover:hover{
+      transform:translateY(-6px);
+      border-color: rgba(212,175,55,0.55);
+      box-shadow:0 22px 50px rgba(0,0,0,0.28);
+    }
+    .soft-border{
+      border:1px solid rgba(246,231,176,0.18);
+    }
+    .nav-scrolled{
+      background: rgba(7,26,47,0.93);
+      border-bottom:1px solid rgba(246,231,176,0.16);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+    }
+    .hero-image{
+      background-image:url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1600&q=80');
+      background-size:cover;
+      background-position:center;
+    }
+    .section-image-study{
+      background-image:url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80');
+      background-size:cover;
+      background-position:center;
+    }
+    .section-image-career{
+      background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80');
+      background-size:cover;
+      background-position:center;
+    }
+    .photo-campus{
+      background-image:url('https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=1200&q=80');
+      background-size:cover;
+      background-position:center;
+    }
+    .photo-success{
+      background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80');
+      background-size:cover;
+      background-position:center;
+    }
+    .shine{
+      position:relative;
+      overflow:hidden;
+    }
+    .shine::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      transform:translateX(-140%);
+      background:linear-gradient(110deg, transparent 20%, rgba(255,255,255,0.18) 50%, transparent 80%);
+      transition:transform .8s ease;
+    }
+    .shine:hover::before{
+      transform:translateX(140%);
+    }
+    .focus-ring:focus-visible{
+      outline:2px solid var(--primary);
+      outline-offset:3px;
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div id="app" class="w-full h-full overflow-auto premium-bg">
+   <header id="siteHeader" class="sticky top-0 z-50 transition-all duration-300">
+    <nav class="w-full">
+     <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between py-4"><a href="#home" class="focus-ring rounded-md flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full border border-[rgba(246,231,176,0.28)] flex items-center justify-center text-[var(--primary)]"><i data-lucide="graduation-cap" class="w-5 h-5"></i>
+        </div>
+        <div>
+         <div id="brandName" class="font-display text-2xl leading-none">
+          Institut Passeport Français
+         </div>
+         <div id="brandSlogan" class="text-xs text-[var(--secondary)] mt-1">
+          Accédez aux études, aux carrières, à la France.
+         </div>
+        </div></a>
+       <div class="hidden lg:flex items-center gap-8 text-sm"><a href="#programmes" data-i18n="navPrograms" class="focus-ring rounded-md hover:text-[var(--primary)] transition">Programmes</a> <a href="#avenir" data-i18n="navFuture" class="focus-ring rounded-md hover:text-[var(--primary)] transition">Avenir</a> <a href="#temoignages" data-i18n="navTestimonials" class="focus-ring rounded-md hover:text-[var(--primary)] transition">Témoignages</a> <a href="#contact" data-i18n="navContact" class="focus-ring rounded-md hover:text-[var(--primary)] transition">Contact</a>
+       </div>
+       <div class="flex items-center gap-3"><label for="languageSwitcher" class="sr-only">Language</label> <select id="languageSwitcher" class="focus-ring rounded-full bg-[rgba(13,39,66,0.85)] soft-border px-4 py-2 text-sm text-white"> <option value="fr">FR</option> <option value="en">EN</option> <option value="es">ES</option> <option value="ru">RU</option> <option value="ar">AR</option> </select> <button id="mobileMenuBtn" class="lg:hidden focus-ring rounded-full glass p-3" aria-label="Menu"> <i data-lucide="menu" class="w-5 h-5"></i> </button>
+       </div>
+      </div>
+      <div id="mobileMenu" class="hidden lg:hidden pb-4">
+       <div class="glass rounded-2xl p-4 flex flex-col gap-3 text-sm"><a href="#programmes" data-i18n="navPrograms" class="focus-ring rounded-md px-2 py-2 hover:text-[var(--primary)] transition">Programmes</a> <a href="#avenir" data-i18n="navFuture" class="focus-ring rounded-md px-2 py-2 hover:text-[var(--primary)] transition">Avenir</a> <a href="#temoignages" data-i18n="navTestimonials" class="focus-ring rounded-md px-2 py-2 hover:text-[var(--primary)] transition">Témoignages</a> <a href="#contact" data-i18n="navContact" class="focus-ring rounded-md px-2 py-2 hover:text-[var(--primary)] transition">Contact</a>
+       </div>
+      </div>
+     </div>
+    </nav>
+   </header>
+   <main>
+    <section id="home" class="w-full">
+     <div class="hero-image">
+      <div class="hero-overlay">
+       <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24 lg:py-28">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+         <div class="max-w-2xl">
+          <div class="animate-rise inline-flex items-center gap-2 rounded-full border border-[rgba(246,231,176,0.28)] bg-[rgba(255,255,255,0.05)] px-4 py-2 text-sm text-[var(--secondary)]"><i data-lucide="sparkles" class="w-4 h-4"></i> <span data-i18n="heroBadge">Institut premium pour votre avenir en France</span>
+          </div>
+          <h1 id="heroHeadline" class="animate-rise delay-1 mt-6 font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.95] gold-line">Votre passeport vers la France commence ici</h1>
+          <p id="heroSubheadline" class="animate-rise delay-2 mt-8 text-lg sm:text-xl text-white/85 max-w-xl leading-relaxed">Préparez-vous aux examens DELF, DALF, TCF et ouvrez les portes des universités françaises et des carrières internationales.</p>
+          <div class="animate-rise delay-3 mt-8 flex flex-col sm:flex-row gap-4"><a href="#contact" id="primaryCta" class="focus-ring shine rounded-full px-7 py-4 text-sm font-semibold text-[var(--bg)] bg-[var(--primary)] hover:opacity-90 transition text-center"> Commencer maintenant </a> <a href="#programmes" id="secondaryCta" class="focus-ring rounded-full px-7 py-4 text-sm font-semibold border border-[rgba(246,231,176,0.28)] bg-[rgba(255,255,255,0.06)] hover:bg-[rgba(255,255,255,0.12)] transition text-center"> Découvrir les programmes </a>
+          </div>
+          <div class="animate-rise delay-4 mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+           <div class="glass rounded-2xl p-4">
+            <div class="text-[var(--primary)] text-2xl font-display">
+             DELF
+            </div>
+            <p class="text-sm text-white/75 mt-1" data-i18n="heroMini1">Préparation structurée et ambitieuse</p>
+           </div>
+           <div class="glass rounded-2xl p-4">
+            <div class="text-[var(--primary)] text-2xl font-display">
+             DALF
+            </div>
+            <p class="text-sm text-white/75 mt-1" data-i18n="heroMini2">Excellence académique et professionnelle</p>
+           </div>
+           <div class="glass rounded-2xl p-4">
+            <div class="text-[var(--primary)] text-2xl font-display">
+             TCF
+            </div>
+            <p class="text-sm text-white/75 mt-1" data-i18n="heroMini3">Accès rapide à vos projets en France</p>
+           </div>
+          </div>
+         </div>
+         <div class="animate-rise delay-2">
+          <div class="glass rounded-[2rem] p-5 sm:p-6">
+           <div class="rounded-[1.5rem] overflow-hidden soft-border">
+            <div class="photo-campus h-72 sm:h-80"></div>
+           </div>
+           <div class="grid grid-cols-2 gap-4 mt-4">
+            <div class="rounded-2xl overflow-hidden soft-border">
+             <div class="section-image-study h-40 sm:h-44"></div>
+            </div>
+            <div class="rounded-2xl overflow-hidden soft-border">
+             <div class="photo-success h-40 sm:h-44"></div>
+            </div>
+           </div>
+           <div class="mt-4 flex items-center justify-between gap-4 rounded-2xl bg-[rgba(255,255,255,0.04)] p-4 soft-border">
+            <div>
+             <div class="text-sm text-white/65" data-i18n="heroStatLabel">
+              Ambition internationale
+             </div>
+             <div class="font-display text-3xl text-[var(--primary)]" data-i18n="heroStatValue">
+              France, études &amp; carrière
+             </div>
+            </div>
+            <div class="w-12 h-12 rounded-full bg-[rgba(212,175,55,0.14)] flex items-center justify-center text-[var(--primary)]"><i data-lucide="arrow-up-right" class="w-6 h-6"></i>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
+     <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+       <p class="uppercase tracking-[0.28em] text-xs text-[var(--primary)]" data-i18n="valueKicker">Votre avantage</p>
+       <h2 class="font-display text-4xl sm:text-5xl mt-4 gold-line" data-i18n="valueTitle">Une trajectoire pensée pour les études, le travail et la réussite en France</h2>
+       <p class="mt-8 text-white/80 text-lg leading-relaxed" data-i18n="valueText">Nous combinons préparation linguistique, stratégie académique et projection professionnelle pour vous aider à entrer dans l’univers français avec confiance, niveau et ambition.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+       <div class="glass rounded-3xl p-6 card-hover"><i data-lucide="building-2" class="w-8 h-8 text-[var(--primary)]"></i>
+        <h3 class="font-display text-3xl mt-5" data-i18n="benefit1Title">Étudier en France avec Campus France</h3>
+        <p class="mt-3 text-white/75" data-i18n="benefit1Text">Préparez votre niveau de langue pour renforcer votre dossier et viser les meilleures opportunités.</p>
+       </div>
+       <div class="glass rounded-3xl p-6 card-hover"><i data-lucide="landmark" class="w-8 h-8 text-[var(--primary)]"></i>
+        <h3 class="font-display text-3xl mt-5" data-i18n="benefit2Title">Accès aux universités françaises</h3>
+        <p class="mt-3 text-white/75" data-i18n="benefit2Text">Développez le français académique attendu dans les parcours universitaires et grandes écoles.</p>
+       </div>
+       <div class="glass rounded-3xl p-6 card-hover"><i data-lucide="briefcase-business" class="w-8 h-8 text-[var(--primary)]"></i>
+        <h3 class="font-display text-3xl mt-5" data-i18n="benefit3Title">Opportunités de carrière</h3>
+        <p class="mt-3 text-white/75" data-i18n="benefit3Text">Journalisme, traduction, entreprises internationales : donnez une portée réelle à votre futur.</p>
+       </div>
+       <div class="glass rounded-3xl p-6 card-hover"><i data-lucide="book-open-check" class="w-8 h-8 text-[var(--primary)]"></i>
+        <h3 class="font-display text-3xl mt-5" data-i18n="benefit4Title">Français académique et professionnel</h3>
+        <p class="mt-3 text-white/75" data-i18n="benefit4Text">Apprenez à convaincre, rédiger, présenter et réussir dans des contextes exigeants.</p>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="programmes" class="max-w-7xl mx-auto px-5 sm:px-8 py-8 sm:py-16">
+     <div class="text-center max-w-3xl mx-auto">
+      <p class="uppercase tracking-[0.28em] text-xs text-[var(--primary)]" data-i18n="programKicker">Programmes</p>
+      <h2 class="font-display text-4xl sm:text-5xl mt-4" data-i18n="programTitle">Choisissez la préparation qui ouvre vos portes</h2>
+      <p class="mt-5 text-white/78 text-lg" data-i18n="programText">Des parcours précis, élégants et efficaces pour transformer votre niveau de français en véritable levier d’avenir.</p>
+     </div>
+     <div class="mt-12 grid md:grid-cols-3 gap-6">
+      <article class="glass rounded-[2rem] p-7 card-hover shine">
+       <div class="w-12 h-12 rounded-full bg-[rgba(212,175,55,0.12)] text-[var(--primary)] flex items-center justify-center"><i data-lucide="award" class="w-6 h-6"></i>
+       </div>
+       <h3 class="font-display text-4xl mt-6">DELF</h3>
+       <p class="mt-4 text-white/78 leading-relaxed" data-i18n="delfText">Une préparation ciblée pour construire une base solide, progresser avec méthode et viser la réussite aux niveaux A1 à B2.</p><a href="#contact" class="focus-ring inline-flex items-center gap-2 mt-6 text-[var(--primary)] font-semibold hover:text-[var(--secondary)] transition"> <span data-i18n="learnMore">En savoir plus</span> <i data-lucide="arrow-right" class="w-4 h-4"></i> </a>
+      </article>
+      <article class="glass rounded-[2rem] p-7 card-hover shine">
+       <div class="w-12 h-12 rounded-full bg-[rgba(212,175,55,0.12)] text-[var(--primary)] flex items-center justify-center"><i data-lucide="medal" class="w-6 h-6"></i>
+       </div>
+       <h3 class="font-display text-4xl mt-6">DALF</h3>
+       <p class="mt-4 text-white/78 leading-relaxed" data-i18n="dalfText">Un accompagnement d’excellence pour maîtriser le français avancé, argumenter avec finesse et accéder aux ambitions les plus élevées.</p><a href="#contact" class="focus-ring inline-flex items-center gap-2 mt-6 text-[var(--primary)] font-semibold hover:text-[var(--secondary)] transition"> <span data-i18n="learnMore">En savoir plus</span> <i data-lucide="arrow-right" class="w-4 h-4"></i> </a>
+      </article>
+      <article class="glass rounded-[2rem] p-7 card-hover shine">
+       <div class="w-12 h-12 rounded-full bg-[rgba(212,175,55,0.12)] text-[var(--primary)] flex items-center justify-center"><i data-lucide="file-check-2" class="w-6 h-6"></i>
+       </div>
+       <h3 class="font-display text-4xl mt-6">TCF</h3>
+       <p class="mt-4 text-white/78 leading-relaxed" data-i18n="tcfText">Préparez efficacement le test de référence pour vos démarches universitaires, administratives ou professionnelles vers la France.</p><a href="#contact" class="focus-ring inline-flex items-center gap-2 mt-6 text-[var(--primary)] font-semibold hover:text-[var(--secondary)] transition"> <span data-i18n="learnMore">En savoir plus</span> <i data-lucide="arrow-right" class="w-4 h-4"></i> </a>
+      </article>
+     </div>
+    </section>
+    <section id="avenir" class="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
+     <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-stretch">
+      <div class="glass rounded-[2rem] overflow-hidden">
+       <div class="section-image-career h-72 sm:h-80"></div>
+       <div class="p-7 sm:p-10">
+        <p class="uppercase tracking-[0.28em] text-xs text-[var(--primary)]" data-i18n="futureKicker">Succès &amp; avenir</p>
+        <h2 class="font-display text-4xl sm:text-5xl mt-4" data-i18n="futureTitle">Imaginez votre avenir en France</h2>
+        <p class="mt-6 text-lg text-white/80 leading-relaxed" data-i18n="futureText">Étudier dans un campus inspirant, évoluer dans un environnement international, vivre à Paris ou ailleurs en France, bâtir une carrière reconnue : votre avenir peut devenir concret, prestigieux et pleinement accessible.</p>
+       </div>
+      </div>
+      <div class="grid gap-5">
+       <div class="glass rounded-3xl p-7 card-hover">
+        <h3 class="font-display text-3xl" data-i18n="futureCard1Title">Étudier</h3>
+        <p class="mt-3 text-white/75" data-i18n="futureCard1Text">Préparez votre entrée dans les universités françaises avec assurance et crédibilité.</p>
+       </div>
+       <div class="glass rounded-3xl p-7 card-hover">
+        <h3 class="font-display text-3xl" data-i18n="futureCard2Title">Travailler</h3>
+        <p class="mt-3 text-white/75" data-i18n="futureCard2Text">Développez le langage professionnel attendu dans les métiers internationaux et francophones.</p>
+       </div>
+       <div class="glass rounded-3xl p-7 card-hover">
+        <h3 class="font-display text-3xl" data-i18n="futureCard3Title">Vivre</h3>
+        <p class="mt-3 text-white/75" data-i18n="futureCard3Text">Gagnez en liberté, en confiance et en mobilité dans votre parcours de vie en France.</p>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="temoignages" class="max-w-7xl mx-auto px-5 sm:px-8 py-8 sm:py-16">
+     <div class="text-center max-w-3xl mx-auto">
+      <p class="uppercase tracking-[0.28em] text-xs text-[var(--primary)]" data-i18n="testiKicker">Témoignages</p>
+      <h2 class="font-display text-4xl sm:text-5xl mt-4" data-i18n="testiTitle">Des parcours internationaux, des résultats réels</h2>
+     </div>
+     <div class="mt-12 grid lg:grid-cols-3 gap-6">
+      <article class="glass rounded-[2rem] p-7 card-hover">
+       <div class="flex items-center gap-1 text-[var(--primary)]"><i data-lucide="star" class="w-4 h-4 fill-current"></i> <i data-lucide="star" class="w-4 h-4 fill-current"></i> <i data-lucide="star" class="w-4 h-4 fill-current"></i> <i data-lucide="star" class="w-4 h-4 fill-current"></i> <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+       </div>
+       <p class="mt-5 text-white/80 leading-relaxed" data-i18n="quote1">“Grâce à l’institut, j’ai obtenu mon DELF B2 et renforcé mon dossier Campus France. Aujourd’hui, j’étudie la communication à Lyon.”</p>
+       <div class="mt-6">
+        <div class="font-semibold">
+         Mariam
+        </div>
+        <div class="text-sm text-white/60" data-i18n="quote1Meta">
+         Maroc · Étudiante internationale
+        </div>
+       </div>
+      </article>
+      <article class="glass rounded-[2rem] p-7 card-hover">
+       <div class="flex items-center gap-1 text-[var(--primary)]"><i data-lucide="star" class="w-4 h-4 fill-current"></i> <i data-lucide="star" class="w-4 h-4 fill-current"></i> <i data-lucide="star" class="w-4 h-4 fill-current"></i> <i data-lucide="star" class="w-4 h-4 fill-current"></i> <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+       </div>
+       <p class="mt-5 text-white/80 leading-relaxed" data-i18n="quote2">“La méthode est moderne, élégante et très efficace. J’ai préparé le TCF avec confiance pour avancer vers mon projet professionnel en France.”</p>
+       <div class="mt-6">
+        <div class="font-semibold">
+         Alejandro
+        </div>
+        <div class="text-sm text-white/60" data-i18n="quote2Meta">
+         Colombie · Jeune professionnel
+        </div>
+       </div>
+      </article>
+      <article class="glass rounded-[2rem] p-7 card-hover">
+       <div class="flex items-center gap-1 text-[var(--primary)]"><i data-lucide="star" class="w-4 h-4 fill-current"></i> <i data-lucide="star" class="w-4 h-4 fill-current"></i> <i data-lucide="star" class="w-4 h-4 fill-current"></i> <i data-lucide="star" class="w-4 h-4 fill-current"></i> <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+       </div>
+       <p class="mt-5 text-white/80 leading-relaxed" data-i18n="quote3">“J’ai amélioré mon français professionnel et je me sens prête pour une carrière internationale. L’accompagnement a été remarquable.”</p>
+       <div class="mt-6">
+        <div class="font-semibold">
+         Sofia
+        </div>
+        <div class="text-sm text-white/60" data-i18n="quote3Meta">
+         Ukraine · Traductrice en devenir
+        </div>
+       </div>
+      </article>
+     </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
+     <div class="grid lg:grid-cols-2 gap-8 items-center">
+      <div class="rounded-[2rem] overflow-hidden soft-border">
+       <div class="photo-success h-80 sm:h-[28rem]"></div>
+      </div>
+      <div>
+       <p class="uppercase tracking-[0.28em] text-xs text-[var(--primary)]" data-i18n="whyKicker">Pourquoi nous choisir</p>
+       <h2 class="font-display text-4xl sm:text-5xl mt-4 gold-line" data-i18n="whyTitle">Une expérience d’apprentissage à la hauteur de vos ambitions</h2>
+       <div class="mt-10 grid gap-4">
+        <div class="glass rounded-2xl p-5 flex items-start gap-4"><i data-lucide="check-circle-2" class="w-6 h-6 text-[var(--primary)] mt-1"></i>
+         <div>
+          <h3 class="font-semibold text-lg" data-i18n="why1Title">Méthode efficace et moderne</h3>
+          <p class="text-white/72 mt-1" data-i18n="why1Text">Des approches actuelles, ciblées et motivantes pour progresser vite et durablement.</p>
+         </div>
+        </div>
+        <div class="glass rounded-2xl p-5 flex items-start gap-4"><i data-lucide="check-circle-2" class="w-6 h-6 text-[var(--primary)] mt-1"></i>
+         <div>
+          <h3 class="font-semibold text-lg" data-i18n="why2Title">Accompagnement personnalisé</h3>
+          <p class="text-white/72 mt-1" data-i18n="why2Text">Chaque projet est unique : nous adaptons la préparation à vos objectifs et à votre rythme.</p>
+         </div>
+        </div>
+        <div class="glass rounded-2xl p-5 flex items-start gap-4"><i data-lucide="check-circle-2" class="w-6 h-6 text-[var(--primary)] mt-1"></i>
+         <div>
+          <h3 class="font-semibold text-lg" data-i18n="why3Title">Résultats rapides</h3>
+          <p class="text-white/72 mt-1" data-i18n="why3Text">Une préparation claire, concentrée et orientée résultats pour avancer avec efficacité.</p>
+         </div>
+        </div>
+        <div class="glass rounded-2xl p-5 flex items-start gap-4"><i data-lucide="check-circle-2" class="w-6 h-6 text-[var(--primary)] mt-1"></i>
+         <div>
+          <h3 class="font-semibold text-lg" data-i18n="why4Title">Approche professionnelle</h3>
+          <p class="text-white/72 mt-1" data-i18n="why4Text">Votre français devient un outil crédible pour vos études, votre carrière et votre avenir.</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
+     <div class="glass rounded-[2.25rem] p-8 sm:p-12 text-center">
+      <p class="uppercase tracking-[0.28em] text-xs text-[var(--primary)]" data-i18n="ctaKicker">Prêt à avancer</p>
+      <h2 class="font-display text-4xl sm:text-6xl mt-4" data-i18n="ctaTitle">Commencez votre transformation aujourd’hui</h2>
+      <p class="mt-5 text-lg text-white/78 max-w-2xl mx-auto" data-i18n="ctaText">Choisissez une formation qui élève votre niveau, renforce votre dossier et vous rapproche concrètement de la France.</p><a href="#contact" class="focus-ring inline-flex items-center justify-center gap-2 mt-8 rounded-full px-8 py-4 bg-[var(--primary)] text-[var(--bg)] font-semibold hover:opacity-90 transition"> <span data-i18n="ctaButton">S'inscrire maintenant</span> <i data-lucide="arrow-right" class="w-5 h-5"></i> </a>
+     </div>
+    </section>
+    <section id="contact" class="max-w-7xl mx-auto px-5 sm:px-8 py-8 sm:py-16">
+     <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+      <div class="glass rounded-[2rem] p-8 sm:p-10">
+       <p class="uppercase tracking-[0.28em] text-xs text-[var(--primary)]" data-i18n="contactKicker">Contact</p>
+       <h2 class="font-display text-4xl sm:text-5xl mt-4" data-i18n="contactTitle">Faites le premier pas vers la France</h2>
+       <p class="mt-6 text-white/78 text-lg leading-relaxed" data-i18n="contactText">Envoyez votre demande et préparez votre prochain chapitre avec un accompagnement sérieux, inspirant et tourné vers les résultats.</p>
+       <div class="mt-8 grid gap-4">
+        <div class="glass rounded-2xl p-5 flex items-center gap-4">
+         <div class="w-12 h-12 rounded-full bg-[rgba(212,175,55,0.12)] flex items-center justify-center text-[var(--primary)]"><i data-lucide="globe-2" class="w-5 h-5"></i>
+         </div>
+         <div>
+          <div class="font-semibold" data-i18n="contactFeature1Title">
+           Vision internationale
+          </div>
+          <div class="text-sm text-white/65" data-i18n="contactFeature1Text">
+           Pensé pour les étudiants et professionnels du monde entier
+          </div>
+         </div>
+        </div>
+        <div class="glass rounded-2xl p-5 flex items-center gap-4">
+         <div class="w-12 h-12 rounded-full bg-[rgba(212,175,55,0.12)] flex items-center justify-center text-[var(--primary)]"><i data-lucide="shield-check" class="w-5 h-5"></i>
+         </div>
+         <div>
+          <div class="font-semibold" data-i18n="contactFeature2Title">
+           Approche de confiance
+          </div>
+          <div class="text-sm text-white/65" data-i18n="contactFeature2Text">
+           Un message clair, simple et professionnel pour démarrer
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="glass rounded-[2rem] p-8 sm:p-10">
+       <form id="contactForm" class="space-y-5">
+        <div><label for="name" class="block text-sm mb-2 text-white/80" data-i18n="formName">Name</label> <input id="name" name="name" type="text" required class="focus-ring w-full rounded-2xl bg-[rgba(255,255,255,0.05)] soft-border px-5 py-4 text-white placeholder:text-white/35" placeholder="Votre nom">
+        </div>
+        <div><label for="email" class="block text-sm mb-2 text-white/80" data-i18n="formEmail">Email</label> <input id="email" name="email" type="email" required class="focus-ring w-full rounded-2xl bg-[rgba(255,255,255,0.05)] soft-border px-5 py-4 text-white placeholder:text-white/35" placeholder="vous@email.com">
+        </div>
+        <div><label for="message" class="block text-sm mb-2 text-white/80" data-i18n="formMessage">Message</label> <textarea id="message" name="message" required rows="5" class="focus-ring w-full rounded-2xl bg-[rgba(255,255,255,0.05)] soft-border px-5 py-4 text-white placeholder:text-white/35 resize-none" placeholder="Parlez-nous de votre projet..."></textarea>
+        </div><button id="submitBtn" type="submit" class="focus-ring w-full rounded-full bg-[var(--primary)] text-[var(--bg)] font-semibold px-6 py-4 hover:opacity-90 transition"> <span data-i18n="formSubmit">Envoyer ma demande</span> </button>
+        <div id="formStatus" class="hidden rounded-2xl px-4 py-3 text-sm"></div>
+       </form>
+      </div>
+     </div>
+    </section>
+   </main>
+   <footer class="max-w-7xl mx-auto px-5 sm:px-8 py-10">
+    <div class="glass rounded-[2rem] p-6 sm:p-8 flex flex-col lg:flex-row gap-6 items-center justify-between">
+     <div>
+      <div class="font-display text-3xl" id="footerBrandName">
+       Institut Passeport Français
+      </div>
+      <div class="text-sm text-white/60 mt-1" id="footerSlogan">
+       Accédez aux études, aux carrières, à la France.
+      </div>
+     </div>
+     <div class="flex items-center gap-3"><a href="#" class="focus-ring w-11 h-11 rounded-full border border-[rgba(246,231,176,0.2)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.06)] transition" aria-label="Instagram"> <i data-lucide="instagram" class="w-5 h-5"></i> </a> <a href="#" class="focus-ring w-11 h-11 rounded-full border border-[rgba(246,231,176,0.2)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.06)] transition" aria-label="Facebook"> <i data-lucide="facebook" class="w-5 h-5"></i> </a> <a href="#" class="focus-ring w-11 h-11 rounded-full border border-[rgba(246,231,176,0.2)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.06)] transition" aria-label="LinkedIn"> <i data-lucide="linkedin" class="w-5 h-5"></i> </a>
+     </div>
+     <div class="flex items-center gap-3"><label for="footerLanguageSwitcher" class="sr-only">Language</label> <select id="footerLanguageSwitcher" class="focus-ring rounded-full bg-[rgba(13,39,66,0.85)] soft-border px-4 py-2 text-sm text-white"> <option value="fr">FR</option> <option value="en">EN</option> <option value="es">ES</option> <option value="ru">RU</option> <option value="ar">AR</option> </select>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      background_color: "#071a2f",
+      surface_color: "#0d2742",
+      text_color: "#ffffff",
+      primary_action_color: "#d4af37",
+      secondary_action_color: "#f6e7b0",
+      font_family: "Cormorant Garamond",
+      font_size: 16,
+      institution_name: "Institut Passeport Français",
+      slogan_text: "Accédez aux études, aux carrières, à la France.",
+      hero_headline: "Votre passeport vers la France commence ici",
+      hero_subheadline: "Préparez-vous aux examens DELF, DALF, TCF et ouvrez les portes des universités françaises et des carrières internationales.",
+      primary_cta_text: "Commencer maintenant",
+      secondary_cta_text: "Découvrir les programmes"
+    };
+
+    const translations = {
+      fr: {
+        dir: "ltr",
+        navPrograms: "Programmes",
+        navFuture: "Avenir",
+        navTestimonials: "Témoignages",
+        navContact: "Contact",
+        heroBadge: "Institut premium pour votre avenir en France",
+        heroMini1: "Préparation structurée et ambitieuse",
+        heroMini2: "Excellence académique et professionnelle",
+        heroMini3: "Accès rapide à vos projets en France",
+        heroStatLabel: "Ambition internationale",
+        heroStatValue: "France, études & carrière",
+        valueKicker: "Votre avantage",
+        valueTitle: "Une trajectoire pensée pour les études, le travail et la réussite en France",
+        valueText: "Nous combinons préparation linguistique, stratégie académique et projection professionnelle pour vous aider à entrer dans l’univers français avec confiance, niveau et ambition.",
+        benefit1Title: "Étudier en France avec Campus France",
+        benefit1Text: "Préparez votre niveau de langue pour renforcer votre dossier et viser les meilleures opportunités.",
+        benefit2Title: "Accès aux universités françaises",
+        benefit2Text: "Développez le français académique attendu dans les parcours universitaires et grandes écoles.",
+        benefit3Title: "Opportunités de carrière",
+        benefit3Text: "Journalisme, traduction, entreprises internationales : donnez une portée réelle à votre futur.",
+        benefit4Title: "Français académique et professionnel",
+        benefit4Text: "Apprenez à convaincre, rédiger, présenter et réussir dans des contextes exigeants.",
+        programKicker: "Programmes",
+        programTitle: "Choisissez la préparation qui ouvre vos portes",
+        programText: "Des parcours précis, élégants et efficaces pour transformer votre niveau de français en véritable levier d’avenir.",
+        delfText: "Une préparation ciblée pour construire une base solide, progresser avec méthode et viser la réussite aux niveaux A1 à B2.",
+        dalfText: "Un accompagnement d’excellence pour maîtriser le français avancé, argumenter avec finesse et accéder aux ambitions les plus élevées.",
+        tcfText: "Préparez efficacement le test de référence pour vos démarches universitaires, administratives ou professionnelles vers la France.",
+        learnMore: "En savoir plus",
+        futureKicker: "Succès & avenir",
+        futureTitle: "Imaginez votre avenir en France",
+        futureText: "Étudier dans un campus inspirant, évoluer dans un environnement international, vivre à Paris ou ailleurs en France, bâtir une carrière reconnue : votre avenir peut devenir concret, prestigieux et pleinement accessible.",
+        futureCard1Title: "Étudier",
+        futureCard1Text: "Préparez votre entrée dans les universités françaises avec assurance et crédibilité.",
+        futureCard2Title: "Travailler",
+        futureCard2Text: "Développez le langage professionnel attendu dans les métiers internationaux et francophones.",
+        futureCard3Title: "Vivre",
+        futureCard3Text: "Gagnez en liberté, en confiance et en mobilité dans votre parcours de vie en France.",
+        testiKicker: "Témoignages",
+        testiTitle: "Des parcours internationaux, des résultats réels",
+        quote1: "“Grâce à l’institut, j’ai obtenu mon DELF B2 et renforcé mon dossier Campus France. Aujourd’hui, j’étudie la communication à Lyon.”",
+        quote1Meta: "Maroc · Étudiante internationale",
+        quote2: "“La méthode est moderne, élégante et très efficace. J’ai préparé le TCF avec confiance pour avancer vers mon projet professionnel en France.”",
+        quote2Meta: "Colombie · Jeune professionnel",
+        quote3: "“J’ai amélioré mon français professionnel et je me sens prête pour une carrière internationale. L’accompagnement a été remarquable.”",
+        quote3Meta: "Ukraine · Traductrice en devenir",
+        whyKicker: "Pourquoi nous choisir",
+        whyTitle: "Une expérience d’apprentissage à la hauteur de vos ambitions",
+        why1Title: "Méthode efficace et moderne",
+        why1Text: "Des approches actuelles, ciblées et motivantes pour progresser vite et durablement.",
+        why2Title: "Accompagnement personnalisé",
+        why2Text: "Chaque projet est unique : nous adaptons la préparation à vos objectifs et à votre rythme.",
+        why3Title: "Résultats rapides",
+        why3Text: "Une préparation claire, concentrée et orientée résultats pour avancer avec efficacité.",
+        why4Title: "Approche professionnelle",
+        why4Text: "Votre français devient un outil crédible pour vos études, votre carrière et votre avenir.",
+        ctaKicker: "Prêt à avancer",
+        ctaTitle: "Commencez votre transformation aujourd’hui",
+        ctaText: "Choisissez une formation qui élève votre niveau, renforce votre dossier et vous rapproche concrètement de la France.",
+        ctaButton: "S'inscrire maintenant",
+        contactKicker: "Contact",
+        contactTitle: "Faites le premier pas vers la France",
+        contactText: "Envoyez votre demande et préparez votre prochain chapitre avec un accompagnement sérieux, inspirant et tourné vers les résultats.",
+        contactFeature1Title: "Vision internationale",
+        contactFeature1Text: "Pensé pour les étudiants et professionnels du monde entier",
+        contactFeature2Title: "Approche de confiance",
+        contactFeature2Text: "Un message clair, simple et professionnel pour démarrer",
+        formName: "Nom",
+        formEmail: "Email",
+        formMessage: "Message",
+        formSubmit: "Envoyer ma demande",
+        formNamePlaceholder: "Votre nom",
+        formEmailPlaceholder: "vous@email.com",
+        formMessagePlaceholder: "Parlez-nous de votre projet...",
+        formSuccess: "Votre message est prêt. Votre application mail va s’ouvrir pour l’envoyer à l’institut.",
+        formError: "Merci de remplir tous les champs avant d’envoyer votre demande."
+      },
+      en: {
+        dir: "ltr",
+        navPrograms: "Programs",
+        navFuture: "Future",
+        navTestimonials: "Testimonials",
+        navContact: "Contact",
+        heroBadge: "Premium institute for your future in France",
+        heroMini1: "Structured and ambitious preparation",
+        heroMini2: "Academic and professional excellence",
+        heroMini3: "Fast access to your plans in France",
+        heroStatLabel: "International ambition",
+        heroStatValue: "France, study & career",
+        valueKicker: "Your advantage",
+        valueTitle: "A pathway designed for study, work and success in France",
+        valueText: "We combine language preparation, academic strategy and professional vision to help you enter the French world with confidence, skill and ambition.",
+        benefit1Title: "Study in France with Campus France",
+        benefit1Text: "Prepare your French level to strengthen your application and target better opportunities.",
+        benefit2Title: "Access to French universities",
+        benefit2Text: "Build the academic French expected in universities and top schools.",
+        benefit3Title: "Career opportunities",
+        benefit3Text: "Journalism, translation, international companies: give your future real reach.",
+        benefit4Title: "Academic and professional French",
+        benefit4Text: "Learn to persuade, write, present and succeed in demanding settings.",
+        programKicker: "Programs",
+        programTitle: "Choose the preparation that opens doors",
+        programText: "Precise, elegant and effective pathways to turn your French into a real lever for your future.",
+        delfText: "Targeted preparation to build strong foundations, progress with method and succeed from A1 to B2 levels.",
+        dalfText: "An excellence-driven path to master advanced French, argue with confidence and reach higher ambitions.",
+        tcfText: "Prepare efficiently for the key test used in university, administrative and professional plans for France.",
+        learnMore: "Learn more",
+        futureKicker: "Success & future",
+        futureTitle: "Imagine your future in France",
+        futureText: "Study on an inspiring campus, grow in an international environment, live in Paris or elsewhere in France, and build a respected career: your future can become real, prestigious and within reach.",
+        futureCard1Title: "Study",
+        futureCard1Text: "Prepare your entry into French universities with confidence and credibility.",
+        futureCard2Title: "Work",
+        futureCard2Text: "Build the professional language expected in international and French-speaking careers.",
+        futureCard3Title: "Live",
+        futureCard3Text: "Gain freedom, confidence and mobility in your life journey in France.",
+        testiKicker: "Testimonials",
+        testiTitle: "International journeys, real results",
+        quote1: "“Thanks to the institute, I earned my DELF B2 and strengthened my Campus France application. Today, I study communication in Lyon.”",
+        quote1Meta: "Morocco · International student",
+        quote2: "“The method is modern, refined and highly effective. I prepared for the TCF with confidence to move closer to my professional project in France.”",
+        quote2Meta: "Colombia · Young professional",
+        quote3: "“I improved my professional French and now feel ready for an international career. The support was exceptional.”",
+        quote3Meta: "Ukraine · Future translator",
+        whyKicker: "Why choose us",
+        whyTitle: "A learning experience shaped for your ambitions",
+        why1Title: "Effective and modern method",
+        why1Text: "Current, focused and motivating approaches to help you progress quickly and lastingly.",
+        why2Title: "Personalized support",
+        why2Text: "Every project is unique: we adapt the preparation to your goals and pace.",
+        why3Title: "Fast results",
+        why3Text: "A clear, concentrated and results-oriented preparation to help you move forward efficiently.",
+        why4Title: "Professional approach",
+        why4Text: "Your French becomes a credible tool for your studies, career and future.",
+        ctaKicker: "Ready to move forward",
+        ctaTitle: "Start your transformation today",
+        ctaText: "Choose training that elevates your level, strengthens your application and brings you closer to France.",
+        ctaButton: "Enroll now",
+        contactKicker: "Contact",
+        contactTitle: "Take the first step toward France",
+        contactText: "Send your request and prepare your next chapter with serious, inspiring and results-driven guidance.",
+        contactFeature1Title: "International vision",
+        contactFeature1Text: "Designed for students and professionals from around the world",
+        contactFeature2Title: "Trusted approach",
+        contactFeature2Text: "A clear, simple and professional way to get started",
+        formName: "Name",
+        formEmail: "Email",
+        formMessage: "Message",
+        formSubmit: "Send my request",
+        formNamePlaceholder: "Your name",
+        formEmailPlaceholder: "you@email.com",
+        formMessagePlaceholder: "Tell us about your project...",
+        formSuccess: "Your message is ready. Your email app will open so you can send it to the institute.",
+        formError: "Please complete all fields before sending your request."
+      },
+      es: {
+        dir: "ltr",
+        navPrograms: "Programas",
+        navFuture: "Futuro",
+        navTestimonials: "Testimonios",
+        navContact: "Contacto",
+        heroBadge: "Instituto premium para tu futuro en Francia",
+        heroMini1: "Preparación estructurada y ambiciosa",
+        heroMini2: "Excelencia académica y profesional",
+        heroMini3: "Acceso rápido a tus proyectos en Francia",
+        heroStatLabel: "Ambición internacional",
+        heroStatValue: "Francia, estudios y carrera",
+        valueKicker: "Tu ventaja",
+        valueTitle: "Un camino pensado para estudiar, trabajar y triunfar en Francia",
+        valueText: "Combinamos preparación lingüística, estrategia académica y visión profesional para ayudarte a entrar al mundo francés con confianza, nivel y ambición.",
+        benefit1Title: "Estudiar en Francia con Campus France",
+        benefit1Text: "Prepara tu nivel de francés para fortalecer tu expediente y acceder a mejores oportunidades.",
+        benefit2Title: "Acceso a universidades francesas",
+        benefit2Text: "Desarrolla el francés académico que exigen las universidades y grandes escuelas.",
+        benefit3Title: "Oportunidades profesionales",
+        benefit3Text: "Periodismo, traducción, empresas internacionales: dale un alcance real a tu futuro.",
+        benefit4Title: "Francés académico y profesional",
+        benefit4Text: "Aprende a convencer, redactar, presentar y triunfar en contextos exigentes.",
+        programKicker: "Programas",
+        programTitle: "Elige la preparación que abre puertas",
+        programText: "Recorridos precisos, elegantes y eficaces para convertir tu francés en una verdadera palanca para tu futuro.",
+        delfText: "Preparación específica para construir una base sólida, avanzar con método y lograr el éxito de A1 a B2.",
+        dalfText: "Un acompañamiento de excelencia para dominar el francés avanzado y acceder a metas más altas.",
+        tcfText: "Prepárate eficazmente para la prueba clave en tus proyectos universitarios, administrativos o profesionales hacia Francia.",
+        learnMore: "Más información",
+        futureKicker: "Éxito y futuro",
+        futureTitle: "Imagina tu futuro en Francia",
+        futureText: "Estudiar en un campus inspirador, crecer en un entorno internacional, vivir en París o en otra ciudad francesa y construir una carrera reconocida: tu futuro puede ser real, prestigioso y accesible.",
+        futureCard1Title: "Estudiar",
+        futureCard1Text: "Prepárate para ingresar a universidades francesas con seguridad y credibilidad.",
+        futureCard2Title: "Trabajar",
+        futureCard2Text: "Desarrolla el lenguaje profesional que exigen las carreras internacionales y francófonas.",
+        futureCard3Title: "Vivir",
+        futureCard3Text: "Gana libertad, confianza y movilidad en tu proyecto de vida en Francia.",
+        testiKicker: "Testimonios",
+        testiTitle: "Trayectorias internacionales, resultados reales",
+        quote1: "“Gracias al instituto obtuve mi DELF B2 y reforcé mi expediente Campus France. Hoy estudio comunicación en Lyon.”",
+        quote1Meta: "Marruecos · Estudiante internacional",
+        quote2: "“El método es moderno, refinado y muy eficaz. Preparé el TCF con confianza para acercarme a mi proyecto profesional en Francia.”",
+        quote2Meta: "Colombia · Joven profesional",
+        quote3: "“Mejoré mi francés profesional y ahora me siento lista para una carrera internacional. El acompañamiento fue excelente.”",
+        quote3Meta: "Ucrania · Futura traductora",
+        whyKicker: "Por qué elegirnos",
+        whyTitle: "Una experiencia de aprendizaje a la altura de tus ambiciones",
+        why1Title: "Método eficaz y moderno",
+        why1Text: "Enfoques actuales, precisos y motivadores para progresar rápido y de forma duradera.",
+        why2Title: "Acompañamiento personalizado",
+        why2Text: "Cada proyecto es único: adaptamos la preparación a tus objetivos y ritmo.",
+        why3Title: "Resultados rápidos",
+        why3Text: "Una preparación clara y orientada a resultados para avanzar con eficacia.",
+        why4Title: "Enfoque profesional",
+        why4Text: "Tu francés se convierte en una herramienta creíble para tus estudios y tu carrera.",
+        ctaKicker: "Listo para avanzar",
+        ctaTitle: "Empieza tu transformación hoy",
+        ctaText: "Elige una formación que eleve tu nivel, fortalezca tu expediente y te acerque a Francia.",
+        ctaButton: "Inscribirme ahora",
+        contactKicker: "Contacto",
+        contactTitle: "Da el primer paso hacia Francia",
+        contactText: "Envía tu solicitud y prepara tu próximo capítulo con una orientación seria, inspiradora y enfocada en resultados.",
+        contactFeature1Title: "Visión internacional",
+        contactFeature1Text: "Pensado para estudiantes y profesionales de todo el mundo",
+        contactFeature2Title: "Enfoque de confianza",
+        contactFeature2Text: "Una forma clara, simple y profesional de empezar",
+        formName: "Nombre",
+        formEmail: "Correo electrónico",
+        formMessage: "Mensaje",
+        formSubmit: "Enviar mi solicitud",
+        formNamePlaceholder: "Tu nombre",
+        formEmailPlaceholder: "tu@email.com",
+        formMessagePlaceholder: "Cuéntanos sobre tu proyecto...",
+        formSuccess: "Tu mensaje está listo. Se abrirá tu aplicación de correo para enviarlo al instituto.",
+        formError: "Por favor completa todos los campos antes de enviar tu solicitud."
+      },
+      ru: {
+        dir: "ltr",
+        navPrograms: "Программы",
+        navFuture: "Будущее",
+        navTestimonials: "Отзывы",
+        navContact: "Контакты",
+        heroBadge: "Премиальный институт для вашего будущего во Франции",
+        heroMini1: "Структурированная и амбициозная подготовка",
+        heroMini2: "Академическое и профессиональное превосходство",
+        heroMini3: "Быстрый доступ к вашим планам во Франции",
+        heroStatLabel: "Международные амбиции",
+        heroStatValue: "Франция, учеба и карьера",
+        valueKicker: "Ваше преимущество",
+        valueTitle: "Путь к учебе, работе и успеху во Франции",
+        valueText: "Мы объединяем языковую подготовку, академическую стратегию и профессиональное развитие, чтобы помочь вам уверенно войти во французскую среду.",
+        benefit1Title: "Учеба во Франции с Campus France",
+        benefit1Text: "Подготовьте уровень французского, чтобы усилить ваше досье и получить лучшие возможности.",
+        benefit2Title: "Доступ к французским университетам",
+        benefit2Text: "Развивайте академический французский, необходимый для университетов и престижных школ.",
+        benefit3Title: "Карьерные возможности",
+        benefit3Text: "Журналистика, перевод, международные компании: придайте вашему будущему реальный масштаб.",
+        benefit4Title: "Академический и профессиональный французский",
+        benefit4Text: "Учитесь убеждать, писать, выступать и добиваться успеха в требовательной среде.",
+        programKicker: "Программы",
+        programTitle: "Выберите подготовку, которая открывает двери",
+        programText: "Точные, элегантные и эффективные программы, которые превращают ваш французский в настоящий инструмент будущего.",
+        delfText: "Целевая подготовка для прочной базы, системного прогресса и успешной сдачи уровней от A1 до B2.",
+        dalfText: "Программа высокого уровня для уверенного владения продвинутым французским и достижения больших целей.",
+        tcfText: "Эффективно подготовьтесь к ключевому тесту для учебных, административных и профессиональных планов во Франции.",
+        learnMore: "Подробнее",
+        futureKicker: "Успех и будущее",
+        futureTitle: "Представьте ваше будущее во Франции",
+        futureText: "Учеба в вдохновляющем кампусе, развитие в международной среде, жизнь в Париже или другом городе Франции и построение признанной карьеры — это может стать вашей реальностью.",
+        futureCard1Title: "Учиться",
+        futureCard1Text: "Подготовьтесь к поступлению во французские университеты с уверенностью и весомым уровнем.",
+        futureCard2Title: "Работать",
+        futureCard2Text: "Освойте профессиональный язык, необходимый для международной и франкоязычной карьеры.",
+        futureCard3Title: "Жить",
+        futureCard3Text: "Получите больше свободы, уверенности и мобильности в вашей жизни во Франции.",
+        testiKicker: "Отзывы",
+        testiTitle: "Международные пути, реальные результаты",
+        quote1: "«Благодаря институту я получила DELF B2 и усилила свое досье Campus France. Сегодня я изучаю коммуникации в Лионе.»",
+        quote1Meta: "Марокко · Международная студентка",
+        quote2: "«Метод современный, изысканный и очень эффективный. Я уверенно подготовился к TCF ради профессионального проекта во Франции.»",
+        quote2Meta: "Колумбия · Молодой специалист",
+        quote3: "«Я улучшила профессиональный французский и теперь чувствую себя готовой к международной карьере. Поддержка была выдающейся.»",
+        quote3Meta: "Украина · Будущий переводчик",
+        whyKicker: "Почему выбирают нас",
+        whyTitle: "Обучение, соответствующее вашим амбициям",
+        why1Title: "Эффективная современная методика",
+        why1Text: "Актуальные, точные и вдохновляющие подходы для быстрого и устойчивого прогресса.",
+        why2Title: "Индивидуальное сопровождение",
+        why2Text: "Каждый проект уникален: мы адаптируем подготовку под ваши цели и ритм.",
+        why3Title: "Быстрые результаты",
+        why3Text: "Четкая и ориентированная на результат подготовка для уверенного движения вперед.",
+        why4Title: "Профессиональный подход",
+        why4Text: "Ваш французский становится надежным инструментом для учебы, карьеры и будущего.",
+        ctaKicker: "Готовы двигаться вперед",
+        ctaTitle: "Начните свое преображение уже сегодня",
+        ctaText: "Выберите обучение, которое поднимет ваш уровень, усилит ваше досье и приблизит вас к Франции.",
+        ctaButton: "Записаться сейчас",
+        contactKicker: "Контакты",
+        contactTitle: "Сделайте первый шаг к Франции",
+        contactText: "Отправьте ваш запрос и начните новый этап с серьезным, вдохновляющим и результативным сопровождением.",
+        contactFeature1Title: "Международное видение",
+        contactFeature1Text: "Создано для студентов и специалистов со всего мира",
+        contactFeature2Title: "Надежный подход",
+        contactFeature2Text: "Понятный, простой и профессиональный способ начать",
+        formName: "Имя",
+        formEmail: "Email",
+        formMessage: "Сообщение",
+        formSubmit: "Отправить запрос",
+        formNamePlaceholder: "Ваше имя",
+        formEmailPlaceholder: "you@email.com",
+        formMessagePlaceholder: "Расскажите о вашем проекте...",
+        formSuccess: "Ваше сообщение готово. Откроется почтовое приложение, чтобы вы могли отправить его институту.",
+        formError: "Пожалуйста, заполните все поля перед отправкой."
+      },
+      ar: {
+        dir: "rtl",
+        navPrograms: "البرامج",
+        navFuture: "المستقبل",
+        navTestimonials: "آراء الطلاب",
+        navContact: "التواصل",
+        heroBadge: "معهد متميز لمستقبلك في فرنسا",
+        heroMini1: "تحضير منظم وطموح",
+        heroMini2: "تميّز أكاديمي ومهني",
+        heroMini3: "وصول سريع إلى مشاريعك في فرنسا",
+        heroStatLabel: "طموح دولي",
+        heroStatValue: "فرنسا، الدراسة والمهنة",
+        valueKicker: "ميزتك",
+        valueTitle: "مسار مصمم للدراسة والعمل والنجاح في فرنسا",
+        valueText: "نجمع بين التحضير اللغوي والاستراتيجية الأكاديمية والرؤية المهنية لمساعدتك على دخول العالم الفرنسي بثقة وكفاءة وطموح.",
+        benefit1Title: "الدراسة في فرنسا مع Campus France",
+        benefit1Text: "طوّر مستواك في الفرنسية لتعزيز ملفك والوصول إلى فرص أفضل.",
+        benefit2Title: "الوصول إلى الجامعات الفرنسية",
+        benefit2Text: "ابنِ الفرنسية الأكاديمية المطلوبة في الجامعات والمدارس العليا.",
+        benefit3Title: "فرص مهنية",
+        benefit3Text: "الصحافة، الترجمة، الشركات الدولية: امنح مستقبلك بعداً حقيقياً.",
+        benefit4Title: "الفرنسية الأكاديمية والمهنية",
+        benefit4Text: "تعلّم الإقناع والكتابة والعرض والنجاح في البيئات المتطلبة.",
+        programKicker: "البرامج",
+        programTitle: "اختر البرنامج الذي يفتح لك الأبواب",
+        programText: "مسارات دقيقة وأنيقة وفعّالة لتحويل لغتك الفرنسية إلى أداة حقيقية لمستقبلك.",
+        delfText: "تحضير موجه لبناء أساس قوي والتقدم بطريقة مدروسة وتحقيق النجاح من A1 إلى B2.",
+        dalfText: "مرافقة راقية لإتقان الفرنسية المتقدمة والوصول إلى طموحات أكبر.",
+        tcfText: "استعد بكفاءة للاختبار المرجعي في مشاريعك الجامعية أو الإدارية أو المهنية نحو فرنسا.",
+        learnMore: "اعرف المزيد",
+        futureKicker: "النجاح والمستقبل",
+        futureTitle: "تخيّل مستقبلك في فرنسا",
+        futureText: "ادرس في حرم جامعي ملهم، وازدهر في بيئة دولية، وعش في باريس أو في أي مدينة فرنسية، وابنِ مسيرة مهنية محترمة — مستقبلك يمكن أن يصبح واقعاً راقياً وفي متناولك.",
+        futureCard1Title: "الدراسة",
+        futureCard1Text: "استعد لدخول الجامعات الفرنسية بثقة ومصداقية.",
+        futureCard2Title: "العمل",
+        futureCard2Text: "طوّر اللغة المهنية المطلوبة في المهن الدولية والفرنكوفونية.",
+        futureCard3Title: "العيش",
+        futureCard3Text: "اكتسب حرية أكبر وثقة وحركة في مسار حياتك في فرنسا.",
+        testiKicker: "آراء الطلاب",
+        testiTitle: "مسارات دولية ونتائج حقيقية",
+        quote1: "“بفضل المعهد حصلت على DELF B2 وعززت ملفي لدى Campus France. واليوم أدرس التواصل في ليون.”",
+        quote1Meta: "المغرب · طالبة دولية",
+        quote2: "“المنهج حديث وراقي وفعّال جداً. استعددت لاختبار TCF بثقة للتقدم نحو مشروعي المهني في فرنسا.”",
+        quote2Meta: "كولومبيا · شاب مهني",
+        quote3: "“طورت فرنسيتي المهنية وأشعر الآن أنني جاهزة لمسيرة دولية. كانت المرافقة ممتازة.”",
+        quote3Meta: "أوكرانيا · مترجمة مستقبلية",
+        whyKicker: "لماذا نحن",
+        whyTitle: "تجربة تعلم تواكب طموحاتك",
+        why1Title: "منهج فعّال وحديث",
+        why1Text: "أساليب معاصرة ودقيقة ومحفزة لمساعدتك على التقدم بسرعة وبشكل مستدام.",
+        why2Title: "مرافقة شخصية",
+        why2Text: "كل مشروع فريد: نكيّف التحضير وفق أهدافك وإيقاعك.",
+        why3Title: "نتائج سريعة",
+        why3Text: "تحضير واضح ومركّز وموجّه نحو النتائج لدفعك إلى الأمام بكفاءة.",
+        why4Title: "مقاربة مهنية",
+        why4Text: "تصبح الفرنسية لديك أداة موثوقة للدراسة والعمل والمستقبل.",
+        ctaKicker: "جاهز للانطلاق",
+        ctaTitle: "ابدأ تحولك اليوم",
+        ctaText: "اختر تدريباً يرفع مستواك ويقوّي ملفك ويقرّبك من فرنسا.",
+        ctaButton: "سجّل الآن",
+        contactKicker: "التواصل",
+        contactTitle: "خذ الخطوة الأولى نحو فرنسا",
+        contactText: "أرسل طلبك وابدأ فصلك القادم مع توجيه جاد وملهم وموجّه نحو النتائج.",
+        contactFeature1Title: "رؤية دولية",
+        contactFeature1Text: "مصمم للطلاب والمهنيين من جميع أنحاء العالم",
+        contactFeature2Title: "مقاربة موثوقة",
+        contactFeature2Text: "طريقة واضحة وبسيطة ومهنية للبدء",
+        formName: "الاسم",
+        formEmail: "البريد الإلكتروني",
+        formMessage: "الرسالة",
+        formSubmit: "إرسال طلبي",
+        formNamePlaceholder: "اسمك",
+        formEmailPlaceholder: "you@email.com",
+        formMessagePlaceholder: "أخبرنا عن مشروعك...",
+        formSuccess: "رسالتك أصبحت جاهزة. سيفتح تطبيق البريد لإرسالها إلى المعهد.",
+        formError: "يرجى تعبئة جميع الحقول قبل الإرسال."
+      }
+    };
+
+    const state = {
+      current_language: "fr"
+    };
+
+    const elements = {
+      root: document.documentElement,
+      body: document.body,
+      app: document.getElementById("app"),
+      siteHeader: document.getElementById("siteHeader"),
+      brandName: document.getElementById("brandName"),
+      brandSlogan: document.getElementById("brandSlogan"),
+      footerBrandName: document.getElementById("footerBrandName"),
+      footerSlogan: document.getElementById("footerSlogan"),
+      heroHeadline: document.getElementById("heroHeadline"),
+      heroSubheadline: document.getElementById("heroSubheadline"),
+      primaryCta: document.getElementById("primaryCta"),
+      secondaryCta: document.getElementById("secondaryCta"),
+      languageSwitcher: document.getElementById("languageSwitcher"),
+      footerLanguageSwitcher: document.getElementById("footerLanguageSwitcher"),
+      mobileMenuBtn: document.getElementById("mobileMenuBtn"),
+      mobileMenu: document.getElementById("mobileMenu"),
+      contactForm: document.getElementById("contactForm"),
+      formStatus: document.getElementById("formStatus"),
+      submitBtn: document.getElementById("submitBtn"),
+      nameInput: document.getElementById("name"),
+      emailInput: document.getElementById("email"),
+      messageInput: document.getElementById("message")
+    };
+
+    function getConfigValue(key) {
+      if (window.elementSdk && window.elementSdk.config && window.elementSdk.config[key] !== undefined && window.elementSdk.config[key] !== "") {
+        return window.elementSdk.config[key];
+      }
+      return defaultConfig[key];
+    }
+
+    function getCurrentLocale() {
+      return translations[state.current_language] || translations.fr;
+    }
+
+    function applyLanguage(lang) {
+      state.current_language = translations[lang] ? lang : "fr";
+      const locale = getCurrentLocale();
+
+      elements.root.lang = state.current_language;
+      elements.root.dir = locale.dir;
+
+      document.querySelectorAll("[data-i18n]").forEach((node) => {
+        const key = node.getAttribute("data-i18n");
+        if (locale[key]) {
+          node.textContent = locale[key];
+        }
+      });
+
+      elements.nameInput.placeholder = locale.formNamePlaceholder;
+      elements.emailInput.placeholder = locale.formEmailPlaceholder;
+      elements.messageInput.placeholder = locale.formMessagePlaceholder;
+      elements.languageSwitcher.value = state.current_language;
+      elements.footerLanguageSwitcher.value = state.current_language;
+
+      const customHeadline = getConfigValue("hero_headline");
+      const customSubheadline = getConfigValue("hero_subheadline");
+      const customPrimary = getConfigValue("primary_cta_text");
+      const customSecondary = getConfigValue("secondary_cta_text");
+
+      elements.heroHeadline.textContent = state.current_language === "fr" ? customHeadline : (locale.hero_headline_override || locale.heroHeadline || translations[state.current_language].heroHeadline || locale.heroTitle || elements.heroHeadline.textContent);
+      elements.heroSubheadline.textContent = state.current_language === "fr" ? customSubheadline : (locale.hero_subheadline_override || locale.heroSubheadline || translations[state.current_language].heroSubheadline || locale.heroText || elements.heroSubheadline.textContent);
+      elements.primaryCta.textContent = state.current_language === "fr" ? customPrimary : locale.formSubmit ? locale.ctaButton !== undefined ? locale.ctaButton === "S'inscrire maintenant" ? customPrimary : locale.ctaButton : customPrimary : customPrimary;
+      elements.secondaryCta.textContent = state.current_language === "fr" ? customSecondary : locale.navPrograms ? locale.learnMore === "En savoir plus" ? customSecondary : (state.current_language === "en" ? "Discover programs" : state.current_language === "es" ? "Descubrir programas" : state.current_language === "ru" ? "Посмотреть программы" : "اكتشف البرامج") : customSecondary;
+
+      if (state.current_language === "en") {
+        elements.heroHeadline.textContent = "Your passport to France begins here";
+        elements.heroSubheadline.textContent = "Prepare for DELF, DALF and TCF exams and open the doors to French universities and international careers.";
+        elements.primaryCta.textContent = "Start now";
+        elements.secondaryCta.textContent = "Discover programs";
+      } else if (state.current_language === "es") {
+        elements.heroHeadline.textContent = "Tu pasaporte hacia Francia comienza aquí";
+        elements.heroSubheadline.textContent = "Prepárate para los exámenes DELF, DALF y TCF y abre las puertas de las universidades francesas y de las carreras internacionales.";
+        elements.primaryCta.textContent = "Comenzar ahora";
+        elements.secondaryCta.textContent = "Descubrir programas";
+      } else if (state.current_language === "ru") {
+        elements.heroHeadline.textContent = "Ваш путь во Францию начинается здесь";
+        elements.heroSubheadline.textContent = "Подготовьтесь к экзаменам DELF, DALF и TCF и откройте двери во французские университеты и международную карьеру.";
+        elements.primaryCta.textContent = "Начать сейчас";
+        elements.secondaryCta.textContent = "Открыть программы";
+      } else if (state.current_language === "ar") {
+        elements.heroHeadline.textContent = "رحلتك إلى فرنسا تبدأ هنا";
+        elements.heroSubheadline.textContent = "استعد لاختبارات DELF وDALF وTCF وافتح أبواب الجامعات الفرنسية والمسارات المهنية الدولية.";
+        elements.primaryCta.textContent = "ابدأ الآن";
+        elements.secondaryCta.textContent = "اكتشف البرامج";
+      } else {
+        elements.heroHeadline.textContent = customHeadline;
+        elements.heroSubheadline.textContent = customSubheadline;
+        elements.primaryCta.textContent = customPrimary;
+        elements.secondaryCta.textContent = customSecondary;
+      }
+    }
+
+    async function onConfigChange(config) {
+      const background = config.background_color || defaultConfig.background_color;
+      const surface = config.surface_color || defaultConfig.surface_color;
+      const text = config.text_color || defaultConfig.text_color;
+      const primary = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondary = config.secondary_action_color || defaultConfig.secondary_action_color;
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseSize = config.font_size || defaultConfig.font_size;
+
+      document.documentElement.style.setProperty("--bg", background);
+      document.documentElement.style.setProperty("--surface", surface);
+      document.documentElement.style.setProperty("--text", text);
+      document.documentElement.style.setProperty("--primary", primary);
+      document.documentElement.style.setProperty("--secondary", secondary);
+
+      elements.body.style.color = text;
+      document.querySelectorAll(".font-display").forEach(el => {
+        el.style.fontFamily = `${customFont}, Georgia, serif`;
+      });
+      document.querySelectorAll("body, p, a, button, input, textarea, select, label, span, div").forEach(el => {
+        if (!el.classList.contains("font-display")) {
+          el.style.fontFamily = `"Manrope", sans-serif`;
+        }
+      });
+
+      document.querySelectorAll("h1, h2, h3").forEach((el, index) => {
+        const scale = el.tagName === "H1" ? 3.8 : el.tagName === "H2" ? 3 : 2.2;
+        el.style.fontSize = `calc(${baseSize}px * ${scale/2})`;
+      });
+      document.querySelectorAll("p, a, input, textarea, select, button, label").forEach(el => {
+        const tag = el.tagName;
+        let factor = 1;
+        if (tag === "LABEL") factor = 0.88;
+        if (tag === "BUTTON") factor = 0.95;
+        el.style.fontSize = `${baseSize * factor}px`;
+      });
+      document.querySelectorAll(".text-xs").forEach(el => {
+        el.style.fontSize = `${baseSize * 0.72}px`;
+      });
+      document.querySelectorAll(".text-sm").forEach(el => {
+        el.style.fontSize = `${baseSize * 0.86}px`;
+      });
+
+      const institutionName = config.institution_name || defaultConfig.institution_name;
+      const sloganText = config.slogan_text || defaultConfig.slogan_text;
+      elements.brandName.textContent = institutionName;
+      elements.brandSlogan.textContent = sloganText;
+      elements.footerBrandName.textContent = institutionName;
+      elements.footerSlogan.textContent = sloganText;
+
+      applyLanguage(state.current_language);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (value) => {
+                config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            },
+            {
+              get: () => config.primary_action_color || defaultConfig.primary_action_color,
+              set: (value) => {
+                config.primary_action_color = value;
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            },
+            {
+              get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+              set: (value) => {
+                config.secondary_action_color = value;
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => {
+              config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => {
+              config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ["institution_name", config.institution_name || defaultConfig.institution_name],
+          ["slogan_text", config.slogan_text || defaultConfig.slogan_text],
+          ["hero_headline", config.hero_headline || defaultConfig.hero_headline],
+          ["hero_subheadline", config.hero_subheadline || defaultConfig.hero_subheadline],
+          ["primary_cta_text", config.primary_cta_text || defaultConfig.primary_cta_text],
+          ["secondary_cta_text", config.secondary_cta_text || defaultConfig.secondary_cta_text]
+        ])
+      });
+    }
+
+    onConfigChange(window.elementSdk ? window.elementSdk.config : defaultConfig);
+
+    elements.languageSwitcher.addEventListener("change", (e) => applyLanguage(e.target.value));
+    elements.footerLanguageSwitcher.addEventListener("change", (e) => applyLanguage(e.target.value));
+
+    elements.mobileMenuBtn.addEventListener("click", () => {
+      elements.mobileMenu.classList.toggle("hidden");
+    });
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 20) {
+        elements.siteHeader.classList.add("nav-scrolled");
+      } else {
+        elements.siteHeader.classList.remove("nav-scrolled");
+      }
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", (e) => {
+        const targetId = link.getAttribute("href");
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          elements.mobileMenu.classList.add("hidden");
+        }
+      });
+    });
+
+    function showFormStatus(message, isError) {
+      elements.formStatus.textContent = message;
+      elements.formStatus.classList.remove("hidden");
+      elements.formStatus.className = "rounded-2xl px-4 py-3 text-sm " + (isError
+        ? "bg-[rgba(140,32,32,0.26)] border border-[rgba(255,120,120,0.25)] text-white"
+        : "bg-[rgba(212,175,55,0.14)] border border-[rgba(246,231,176,0.22)] text-white");
+    }
+
+    elements.contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const locale = getCurrentLocale();
+      const name = elements.nameInput.value.trim();
+      const email = elements.emailInput.value.trim();
+      const message = elements.messageInput.value.trim();
+
+      if (!name || !email || !message) {
+        showFormStatus(locale.formError, true);
+        return;
+      }
+
+      elements.submitBtn.disabled = true;
+      elements.submitBtn.classList.add("opacity-70", "cursor-not-allowed");
+
+      const subject = encodeURIComponent(`Contact Website - ${name}`);
+      const body = encodeURIComponent(
+        `${locale.formName}: ${name}\n${locale.formEmail}: ${email}\n\n${locale.formMessage}:\n${message}`
+      );
+      const mailtoUrl = `mailto:institutpasseportfrancais@outlook.com?subject=${subject}&body=${body}`;
+
+      showFormStatus(locale.formSuccess, false);
+      window.open(mailtoUrl, "_blank", "noopener,noreferrer");
+
+      setTimeout(() => {
+        elements.submitBtn.disabled = false;
+        elements.submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
+      }, 900);
+    });
+
+    applyLanguage("fr");
+    lucide.createIcons();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e47c350e6230b6a',t:'MTc3NDg4MDUwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
