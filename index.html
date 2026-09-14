@@ -2,121 +2,424 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Institut Passeport Français — cours de français personnalisés, de A1 à C2, conversation, professionnel et préparation aux examens.">
-<title>Institut Passeport Français — Plus qu'une langue, un monde à explorer.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Institut Passeport Français — cours de français personnalisés, de A1 à C2, conversation, français professionnel et préparation aux examens.">
+<meta name="theme-color" content="#102B43"><meta name="robots" content="index,follow"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="color-scheme" content="light">
+<title>Institut Passeport Français — Plus qu’une langue, un monde à explorer.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
- --navy:#102B43;--navy2:#183B56;--cream:#F8F5EF;--paper:#FFFCF7;
- --red:#B9253B;--gold:#C79A4B;--ink:#1D2A35;--muted:#667381;
- --line:#E5E0D8;--white:#fff;--radius:22px;--shadow:0 16px 50px rgba(16,43,67,.08);
-}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}.container{width:min(1180px,calc(100% - 40px));margin:auto}
-.top{background:var(--navy);color:#fff;font-size:12px;letter-spacing:.04em;padding:8px 0}
-.top .container{display:flex;justify-content:space-between;gap:18px}
-header{position:sticky;top:0;z-index:20;background:rgba(255,252,247,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(229,224,216,.8)}
-.nav{height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.logo{width:275px;height:auto}.links{display:flex;align-items:center;gap:26px;font-size:13px;font-weight:600}.links a{padding:31px 0;border-bottom:2px solid transparent}.links a:hover,.links a.active{color:var(--red);border-color:var(--red)}
-.lang{display:flex;gap:7px;align-items:center;font-size:12px}.lang button{border:0;background:transparent;cursor:pointer;padding:6px 7px;color:var(--muted);font:inherit}.lang button.active{color:var(--navy);font-weight:700}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid transparent;border-radius:999px;padding:13px 20px;font-weight:700;font-size:13px;cursor:pointer;transition:.2s}.btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(185,37,59,.18)}.btn-primary:hover{transform:translateY(-2px);background:#a51e33}.btn-ghost{background:transparent;border-color:var(--navy);color:var(--navy)}.btn-ghost:hover{background:var(--navy);color:#fff}
-.hero{padding:86px 0 74px;background:linear-gradient(135deg,#fbf8f2 0%,#f4eee4 100%);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:72px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:20px}.hero h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(48px,6vw,76px);line-height:1.02;color:var(--navy);margin:0 0 22px;font-weight:600;letter-spacing:-.03em}.hero h1 em{color:var(--red);font-style:normal}.hero p{font-size:18px;max-width:570px;color:#51606d;margin:0 0 30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.micro{display:flex;gap:25px;margin-top:35px;font-size:12px;color:var(--muted)}.micro span{display:flex;align-items:center;gap:7px}.dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
-.hero-art{position:relative}.hero-art img{width:100%;height:500px;object-fit:cover;border-radius:28px;box-shadow:var(--shadow)}.seal{position:absolute;left:-30px;bottom:30px;width:125px;height:125px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;text-align:center;padding:20px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:7px solid #fff;box-shadow:var(--shadow)}.seal b{font-family:"Playfair Display",serif;font-size:25px;letter-spacing:0;text-transform:none;color:#e5c17d}
-.trust{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}.trust-item{padding:24px 20px;text-align:center;border-right:1px solid var(--line);font-size:12px;color:var(--muted)}.trust-item:last-child{border:0}.trust-item strong{display:block;color:var(--navy);font-size:14px;margin-bottom:3px}
-section{padding:92px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:40px}.kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}.section-title{font-family:"Playfair Display",Georgia,serif;color:var(--navy);font-size:clamp(36px,4vw,54px);line-height:1.05;margin:9px 0 0}.section-lead{max-width:520px;color:var(--muted);font-size:15px}
-.goals{background:var(--cream)}.goal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.goal{background:#fff;border:1px solid var(--line);padding:30px;border-radius:18px;min-height:220px;transition:.25s;position:relative}.goal:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#d7c7aa}.number{font-family:"Playfair Display",serif;color:var(--gold);font-size:16px}.goal h3{font-family:"Playfair Display",serif;color:var(--navy);font-size:25px;margin:18px 0 8px}.goal p{font-size:13px;color:var(--muted);margin:0 0 18px}.arrow{position:absolute;right:24px;bottom:23px;color:var(--red);font-size:20px}
+:root{--navy:#102B43;--navy2:#183B56;--cream:#F8F5EF;--paper:#FFFCF7;--red:#B9253B;--gold:#C79A4B;--ink:#1D2A35;--muted:#667381;--line:#E5E0D8;--white:#fff;--shadow:0 18px 55px rgba(16,43,67,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;line-height:1.6}body.modal-open{overflow:hidden}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.top{background:var(--navy);color:#fff;font-size:12px;padding:8px 0}.top .container{display:flex;justify-content:space-between;gap:18px}
+header{position:sticky;top:0;z-index:30;background:rgba(255,252,247,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(229,224,216,.9)}.nav{height:84px;display:flex;align-items:center;justify-content:space-between;gap:22px}.logo{width:270px;height:auto}
+.links{display:flex;align-items:center;gap:23px;font-size:13px;font-weight:600}.links a{padding:30px 0;border-bottom:2px solid transparent}.links a:hover,.links a.active{color:var(--red);border-color:var(--red)}
+.nav-actions{display:flex;align-items:center;gap:10px}.lang{display:flex;gap:2px;align-items:center}.lang button{min-width:36px;border:0;background:transparent;color:var(--muted);cursor:pointer;padding:8px 6px;border-radius:8px;font-size:12px;font-weight:600}.lang button.active{background:#eee9df;color:var(--navy)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;border-radius:999px;padding:13px 20px;font-weight:700;font-size:13px;cursor:pointer;transition:.2s}.btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(185,37,59,.18)}.btn-primary:hover{transform:translateY(-2px);background:#a51e33}.btn-ghost{background:transparent;border-color:var(--navy);color:var(--navy)}.btn-ghost:hover{background:var(--navy);color:#fff}.menu-btn{display:none;border:0;background:transparent;color:var(--navy);font-size:27px;cursor:pointer}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:var(--paper);padding:12px 20px 20px}.mobile-menu.open{display:block}.mobile-menu a{display:block;padding:13px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:14px}.mobile-menu .btn{margin-top:15px;width:100%}
+.hero{padding:82px 0 72px;background:linear-gradient(135deg,#fbf8f2 0%,#f4eee4 100%);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center}.eyebrow,.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.21em;color:var(--gold);font-weight:700}.hero h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(48px,6vw,76px);line-height:1.02;color:var(--navy);margin:18px 0 22px;letter-spacing:-.03em}.hero h1 em{color:var(--red);font-style:normal}.hero p{font-size:18px;max-width:570px;color:#51606d;margin:0 0 30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.micro{display:flex;gap:25px;margin-top:35px;font-size:12px;color:var(--muted)}.micro span{display:flex;align-items:center;gap:7px}.dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.hero-art{position:relative}.hero-art img{width:100%;height:500px;object-fit:cover;border-radius:28px;box-shadow:var(--shadow)}.seal{position:absolute;left:-28px;bottom:28px;width:124px;height:124px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;text-align:center;padding:17px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:7px solid #fff;box-shadow:var(--shadow)}.seal b{font-family:"Playfair Display",serif;font-size:27px;letter-spacing:0;text-transform:none;color:#e5c17d}
+.trust{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}.trust-item{padding:23px 18px;text-align:center;border-right:1px solid var(--line);font-size:12px;color:var(--muted)}.trust-item:last-child{border:0}.trust-item strong{display:block;color:var(--navy);font-size:14px;margin-bottom:3px}
+section{padding:90px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.section-title{font-family:"Playfair Display",Georgia,serif;color:var(--navy);font-size:clamp(36px,4vw,54px);line-height:1.05;margin:9px 0 0}.section-lead{max-width:520px;color:var(--muted);font-size:15px}
+.goals{background:var(--cream)}.goal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.goal{background:#fff;border:1px solid var(--line);padding:30px;border-radius:18px;min-height:215px;transition:.25s;position:relative;cursor:pointer}.goal:hover,.goal.selected{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#d6c5a6}.goal.selected{outline:2px solid rgba(185,37,59,.15)}.number{font-family:"Playfair Display",serif;color:var(--gold);font-size:16px}.goal h3{font-family:"Playfair Display",serif;color:var(--navy);font-size:24px;margin:18px 0 8px}.goal p{font-size:13px;color:var(--muted);margin:0 0 18px}.arrow{position:absolute;right:24px;bottom:23px;color:var(--red);font-size:20px}.recommend{margin-top:18px;background:var(--navy);color:#fff;border-radius:16px;padding:17px 20px;display:none;justify-content:space-between;align-items:center;gap:15px;font-size:13px}.recommend.show{display:flex}.recommend strong{color:#fff}
 .method-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}.method-copy p{color:var(--muted);max-width:450px}.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.step{padding:24px;background:#fff;border:1px solid var(--line);border-radius:18px}.step span{font-size:11px;color:var(--gold);font-weight:700}.step h4{font-family:"Playfair Display",serif;font-size:21px;color:var(--navy);margin:8px 0 5px}.step p{font-size:12px;color:var(--muted);margin:0}
-.level{background:var(--navy);color:#fff}.level .section-title{color:#fff}.level .section-lead{color:#c8d1d8}.levels{display:flex;gap:10px;margin:35px 0}.level-pill{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:#23465f;border:1px solid #44647a;font-weight:700}.level-pill.active{background:var(--red);border-color:var(--red);box-shadow:0 0 0 6px rgba(185,37,59,.14)}.level-note{font-size:12px;color:#c8d1d8}
-.story{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.story-photo{height:440px;border-radius:26px;object-fit:cover;width:100%}.quote{font-family:"Playfair Display",serif;color:var(--navy);font-size:30px;line-height:1.3;margin:22px 0}.quote-by{font-size:13px;color:var(--muted)}.quote-by b{color:var(--navy)}
+.level{background:var(--navy);color:#fff}.level .section-title{color:#fff}.level .section-lead{color:#c8d1d8}.levels{display:flex;gap:10px;margin:35px 0;overflow:auto;padding-bottom:8px}.level-pill{min-width:70px;width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:#23465f;border:1px solid #44647a;font-weight:700;cursor:pointer}.level-pill.active{background:var(--red);border-color:var(--red);box-shadow:0 0 0 6px rgba(185,37,59,.14)}.level-info{color:#dce4e9;font-size:13px;min-height:22px}.level-note{font-size:12px;color:#c8d1d8;margin-top:10px}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.story-photo{height:440px;border-radius:26px;object-fit:cover;width:100%}.quote{font-family:"Playfair Display",serif;color:var(--navy);font-size:30px;line-height:1.3;margin:22px 0}.quote-by{font-size:13px;color:var(--muted)}
 .resources{background:var(--cream)}.resource-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px}.resource{background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--line)}.resource img{width:100%;height:220px;object-fit:cover}.resource .pad{padding:24px}.tag{font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);font-weight:700}.resource h3{font-family:"Playfair Display",serif;color:var(--navy);font-size:23px;margin:9px 0}.resource p{font-size:12px;color:var(--muted);margin:0}
-.cta{padding:75px 0;background:linear-gradient(120deg,#f4e9dc,#fbf8f2);border-top:1px solid var(--line)}.cta-box{display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-family:"Playfair Display",serif;color:var(--navy);font-size:clamp(34px,4vw,52px);margin:0 0 8px}.cta p{color:var(--muted);margin:0}
-footer{background:var(--navy);color:#c7d0d7;padding:60px 0 20px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px}.footer-logo{filter:brightness(0) invert(1);width:255px}.footer h4{color:#fff;font-size:13px;margin:0 0 14px}.footer a,.footer p{font-size:12px;line-height:2;color:#c7d0d7;margin:0}.footer a:hover{color:#fff}.bottom{border-top:1px solid #315066;margin-top:45px;padding-top:18px;display:flex;justify-content:space-between;font-size:10px;gap:20px}
-.menu{display:none;border:0;background:none;font-size:26px;color:var(--navy)}
-.modal{position:fixed;inset:0;background:rgba(16,43,67,.55);display:none;place-items:center;z-index:50;padding:20px}.modal.show{display:grid}.modal-card{background:#fff;width:min(540px,100%);border-radius:22px;padding:32px;box-shadow:0 30px 80px rgba(0,0,0,.2)}.modal-card h3{font-family:"Playfair Display",serif;color:var(--navy);font-size:32px;margin:0 0 10px}.modal-card p{font-size:13px;color:var(--muted)}.close{float:right;border:0;background:none;font-size:24px;cursor:pointer}.form{display:grid;gap:12px;margin-top:20px}.form input,.form select{padding:14px 15px;border:1px solid var(--line);border-radius:10px;font:inherit}.success{display:none;background:#eef6f1;padding:14px;border-radius:10px;color:#24563b;font-size:13px}
+.cta{padding:72px 0;background:linear-gradient(120deg,#f4e9dc,#fbf8f2);border-top:1px solid var(--line)}.cta-box{display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-family:"Playfair Display",serif;color:var(--navy);font-size:clamp(34px,4vw,52px);margin:0 0 8px}.cta p{color:var(--muted);margin:0}
+footer{background:var(--navy);color:#c7d0d7;padding:58px 0 20px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px}.footer-logo{filter:brightness(0) invert(1);width:255px}.footer h4{color:#fff;font-size:13px;margin:0 0 14px}.footer a,.footer p{font-size:12px;line-height:2;color:#c7d0d7;margin:0}.footer a:hover{color:#fff}.bottom{border-top:1px solid #315066;margin-top:45px;padding-top:18px;display:flex;justify-content:space-between;font-size:10px;gap:20px}
+.modal{position:fixed;inset:0;background:rgba(16,43,67,.62);display:none;place-items:center;z-index:60;padding:18px}.modal.show{display:grid}.modal-card{background:#fff;width:min(570px,100%);max-height:90vh;overflow:auto;border-radius:22px;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.24)}.close{float:right;border:0;background:none;font-size:27px;cursor:pointer;color:var(--muted)}.modal-card h3{font-family:"Playfair Display",serif;color:var(--navy);font-size:32px;margin:0 30px 7px 0}.modal-card>p{font-size:13px;color:var(--muted);margin-top:0}.form{display:grid;gap:12px;margin-top:20px}.form label{font-size:12px;font-weight:700;color:var(--navy)}.form input,.form select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;outline:none}.form input:focus,.form select:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(16,43,67,.08)}.success{display:none;background:#eef6f1;padding:14px;border-radius:10px;color:#24563b;font-size:13px}.quiz{margin-top:20px;border-top:1px solid var(--line);padding-top:20px}.quiz-q{font-weight:700;color:var(--navy);margin-bottom:12px}.quiz-options{display:grid;gap:8px}.quiz-options button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:12px;text-align:left;cursor:pointer}.quiz-options button:hover,.quiz-options button.chosen{border-color:var(--red);background:#fff7f8}.quiz-result{display:none;margin-top:15px;padding:15px;background:var(--cream);border-radius:12px;color:var(--navy);font-size:13px}
 .reveal{opacity:0;transform:translateY(18px);transition:.7s ease}.reveal.in{opacity:1;transform:none}
-@media(max-width:950px){.links{display:none}.menu{display:block}.nav{height:72px}.logo{width:245px}.hero{padding-top:55px}.hero-grid,.method-grid,.story{grid-template-columns:1fr;gap:38px}.hero-art{order:-1}.hero-art img{height:390px}.trust-grid{grid-template-columns:repeat(2,1fr)}.trust-item:nth-child(2){border-right:0}.goal-grid{grid-template-columns:repeat(2,1fr)}.resource-grid{grid-template-columns:1fr 1fr}.resource:first-child{grid-column:1/-1}.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:620px){.container{width:min(100% - 28px,1180px)}.top{display:none}.nav{height:68px}.logo{width:220px}.hero{padding:45px 0}.hero h1{font-size:47px}.hero p{font-size:16px}.hero-art img{height:310px}.seal{width:92px;height:92px;left:-8px;bottom:18px;font-size:8px}.seal b{font-size:19px}.micro{flex-direction:column;gap:8px}.trust-grid,.goal-grid,.steps,.resource-grid,.footer-grid{grid-template-columns:1fr}.trust-item{border-right:0;border-bottom:1px solid var(--line)}section{padding:65px 0}.section-head{display:block}.section-head .btn{margin-top:18px}.levels{overflow:auto;padding-bottom:8px}.level-pill{min-width:62px;width:62px;height:62px}.story-photo{height:330px}.cta-box{display:block}.cta-box .btn{margin-top:22px}.bottom{display:block}.bottom span{display:block;margin-top:7px}}
+@media(max-width:1050px){.links{gap:15px}.nav-actions .btn-primary{display:none}.menu-btn{display:block}.links{display:none}.hero-grid,.method-grid,.story{grid-template-columns:1fr;gap:40px}.hero-art{order:-1}.hero-art img{height:390px}.goal-grid{grid-template-columns:repeat(2,1fr)}.resource-grid{grid-template-columns:1fr 1fr}.resource:first-child{grid-column:1/-1}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.container{width:min(100% - 28px,1180px)}.top{display:none}.nav{height:68px}.logo{width:220px}.nav-actions .lang{display:none}.hero{padding:46px 0}.hero h1{font-size:47px}.hero p{font-size:16px}.hero-art img{height:300px}.seal{width:90px;height:90px;left:-7px;bottom:18px;font-size:7px}.seal b{font-size:20px}.micro{flex-direction:column;gap:8px}.trust-grid,.goal-grid,.steps,.resource-grid,.footer-grid{grid-template-columns:1fr}.trust-item{border-right:0;border-bottom:1px solid var(--line)}section{padding:64px 0}.section-head{display:block}.section-head .btn{margin-top:17px}.levels{margin-top:25px}.story-photo{height:320px}.cta-box{display:block}.cta-box .btn{margin-top:22px}.bottom{display:block}.bottom span{display:block;margin-top:7px}}
+
+.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand>img{width:58px;height:58px;object-fit:contain;flex:none}.brand-copy{display:flex;flex-direction:column;line-height:1.05;white-space:nowrap}.brand-copy strong{font:600 11px "DM Sans",sans-serif;letter-spacing:.22em;color:var(--navy)}.brand-copy b{font:600 19px "Playfair Display",Georgia,serif;letter-spacing:.01em;color:var(--navy)}.brand-copy small{font:500 7px "DM Sans",sans-serif;letter-spacing:.12em;color:var(--muted);margin-top:5px}.footer-brand .brand-copy strong,.footer-brand .brand-copy b{color:#fff}.footer-brand .brand-copy small{color:#c7d0d7}.footer-brand>img{filter:none}.footer-brand{margin-bottom:10px}
+@media(max-width:620px){.brand>img{width:50px;height:50px}.brand-copy b{font-size:16px}.brand-copy strong{font-size:9px}.brand-copy small{font-size:6px}}
+
+html.js .reveal{opacity:0;transform:translateY(18px)}
+html.js .reveal.in{opacity:1;transform:none}
+.skip-link{position:absolute;left:12px;top:8px;transform:translateY(-180%);z-index:100;background:var(--navy);color:#fff;padding:10px 14px;border-radius:8px;font-weight:700}.skip-link:focus{transform:none}:focus-visible{outline:3px solid rgba(185,37,59,.45);outline-offset:3px}
+button,a,input,select{touch-action:manipulation}
+.btn,.lang button,.menu-btn,.level-pill,.quiz-options button,.goal,.ipf-pill,.ipf-step{min-height:44px}
+.form input,.form select{font-size:16px}
+.form .required-mark{color:var(--red);margin-left:3px}
+.form-error{display:none;background:#fff3f4;border:1px solid #edc3c8;color:#8f1d2d;padding:12px 14px;border-radius:10px;font-size:13px}
+.form-error.show{display:block}
+.modal-card{position:relative}
+.close{width:44px;height:44px;display:grid;place-items:center;float:none;position:absolute;right:14px;top:14px}
+.modal-card h3{padding-right:44px}
+.ipf-choice{margin:0;padding:0;border:0}
+.ipf-choice legend{font-family:"Playfair Display",serif;font-size:24px;color:var(--navy);margin-bottom:8px}
+.ipf-lovebar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 30px;padding:20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,252,247,.78)}
+.ipf-lovebar strong{font-family:"Playfair Display",serif;font-size:1.1rem;color:var(--navy);width:100%}
+.ipf-pill{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 15px;cursor:pointer;color:var(--ink);transition:.2s}
+.ipf-pill:hover,.ipf-pill.active{border-color:var(--red);color:var(--red);transform:translateY(-1px)}
+.ipf-progress{height:6px;background:#ebe6dd;border-radius:999px;overflow:hidden;margin-top:4px;width:100%}
+.ipf-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red),var(--gold));transition:width .35s ease}
+.ipf-journey{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 18px}
+.ipf-step{padding:20px;border-radius:20px;background:var(--paper);border:1px solid var(--line);cursor:pointer;text-align:left;transition:.25s;width:100%}
+.ipf-step:hover,.ipf-step.active{transform:translateY(-3px);border-color:rgba(185,37,59,.35);box-shadow:0 12px 30px rgba(16,43,67,.08)}
+.ipf-step small{display:block;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
+.ipf-step h3{margin:0 0 7px;font-family:"Playfair Display",serif;color:var(--navy)}
+.ipf-step p{margin:0;color:var(--muted);line-height:1.6}
+.ipf-result{margin-top:16px;padding:18px 20px;border-radius:18px;background:var(--navy);color:#fff;display:block;min-height:72px}
+@media(max-width:700px){.ipf-journey{grid-template-columns:1fr}.ipf-lovebar{align-items:flex-start}.ipf-pill{width:100%;text-align:left}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
 </style>
-</head>
-<body>
-<div class="top"><div class="container"><span>Plus qu’une langue, un monde à explorer.</span><span>Étudiants&nbsp;&nbsp; Entreprises&nbsp;&nbsp; FAQ</span></div></div>
+<link rel="canonical" href="https://passeportfrancais.com/"><meta property="og:type" content="website"><meta property="og:title" content="Institut Passeport Français"><meta property="og:description" content="Cours de français personnalisés, de A1 à C2."><meta property="og:url" content="https://passeportfrancais.com/"></head>
+<body><a class="skip-link" href="#contenu-principal">Aller au contenu</a>
+<div class="top"><div class="container"><span data-i18n="top">Plus qu’une langue, un monde à explorer.</span><span><a href="#cours" data-i18n="top.students">Étudiants</a>&nbsp;&nbsp; · &nbsp;&nbsp;<a href="#contact" data-i18n="top.business">Entreprises</a>&nbsp;&nbsp; · &nbsp;&nbsp;<a href="#contact" data-i18n="top.faq">FAQ</a></span></div></div>
 <header>
- <div class="container nav">
-  <a href="#accueil"><img class="logo" src="assets/logo.svg" alt="Institut Passeport Français"></a>
-  <nav class="links"><a class="active" href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#cours">Nos cours</a><a href="#methode">Méthode</a><a href="#ressources">Ressources</a><a href="#contact">Contact</a></nav>
-  <div style="display:flex;align-items:center;gap:10px"><div class="lang"><button class="active" data-lang="fr">FR</button><span>|</span><button data-lang="en">EN</button><span>|</span><button data-lang="ru">RU</button></div><button class="btn btn-primary" onclick="openModal()">Commencer</button><button class="menu" onclick="alert('Sur mobile, utilisez les liens du menu simplifié dans la prochaine version.')">☰</button></div>
- </div>
+<div class="container nav">
+<a href="#accueil" class="brand" aria-label="Institut Passeport Français">
+<img src="https://i.ibb.co/5W1vs2xQ/Elegance-in-Three-Emblems-removebg-preview.png" alt="Logo Institut Passeport Français" data-i18n-alt="alt.logo">
+<span class="brand-copy"><strong>INSTITUT</strong><b>PASSEPORT FRANÇAIS</b><small>PLUS QU’UNE LANGUE, UN MONDE À EXPLORER.</small></span>
+</a>
+<nav class="links" aria-label="Navigation principale"><a class="active" href="#accueil" data-i18n="nav.home">Accueil</a><a href="#apropos" data-i18n="nav.about">À propos</a><a href="#cours" data-i18n="nav.courses">Nos cours</a><a href="#methode" data-i18n="nav.method">Méthode</a><a href="#ressources" data-i18n="nav.resources">Ressources</a><a href="#contact" data-i18n="nav.contact">Contact</a></nav>
+<div class="nav-actions"><div class="lang" aria-label="Language selector"><button class="active" data-lang="fr">FR</button><button data-lang="en">EN</button><button data-lang="ru">RU</button></div><button class="btn btn-primary" id="startBtn" data-i18n="nav.start">Commencer</button><button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">☰</button></div>
+</div>
+<div class="mobile-menu" id="mobileMenu"><a href="#accueil" data-i18n="nav.home">Accueil</a><a href="#apropos" data-i18n="nav.about">À propos</a><a href="#cours" data-i18n="nav.courses">Nos cours</a><a href="#methode" data-i18n="nav.method">Méthode</a><a href="#ressources" data-i18n="nav.resources">Ressources</a><a href="#contact" data-i18n="nav.contact">Contact</a><button class="btn btn-primary" id="mobileStart" data-i18n="nav.start">Commencer</button></div>
 </header>
 
-<main>
+<main id="contenu-principal">
 <section class="hero" id="accueil"><div class="container hero-grid">
- <div class="reveal"><div class="eyebrow">Langue · Culture · Opportunités</div>
- <h1>Votre passeport vers <em>le français.</em></h1>
- <p>Apprenez le français avec une approche claire, élégante et personnalisée — de votre premier mot jusqu’à la maîtrise.</p>
- <div class="hero-actions"><a class="btn btn-primary" href="#cours">Découvrir les cours&nbsp; →</a><button class="btn btn-ghost" onclick="openModal()">Quel est mon niveau&nbsp;?</button></div>
- <div class="micro"><span><i class="dot"></i> A1 → C2</span><span><i class="dot"></i> Cours en ligne</span><span><i class="dot"></i> FR · EN · RU</span></div></div>
- <div class="hero-art reveal"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=85" alt="Paris et la Tour Eiffel"><div class="seal"><div><b>IPF</b><br>Français · Culture · Avenir</div></div></div>
+<div class="reveal"><div class="eyebrow" data-i18n="hero.eyebrow">Langue · Culture · Opportunités</div><h1 data-i18n="hero.title">Votre passeport vers <em>le français.</em></h1><p data-i18n="hero.text">Apprenez le français avec une approche claire, élégante et personnalisée — de votre premier mot jusqu’à la maîtrise.</p><div class="hero-actions"><a class="btn btn-primary" href="#cours" data-i18n="hero.cta1">Découvrir les cours →</a><button class="btn btn-ghost" id="levelBtn" data-i18n="hero.cta2">Quel est mon niveau ?</button></div><div class="micro"><span><i class="dot"></i><span data-i18n="hero.micro1">A1 → C2</span></span><span><i class="dot"></i><span data-i18n="hero.micro2">Cours en ligne</span></span><span><i class="dot"></i><span data-i18n="hero.micro3">FR · EN · RU</span></span></div></div>
+<div class="hero-art reveal"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=85" alt="Paris et la Tour Eiffel" data-i18n-alt="alt.paris"><div class="seal"><div><b>IPF</b><br><span data-i18n="seal">Français · Culture · Avenir</span></div></div></div>
 </div></section>
 
-<div class="trust"><div class="container trust-grid"><div class="trust-item"><strong>Une pédagogie sur mesure</strong>Un parcours adapté à vos objectifs</div><div class="trust-item"><strong>A1 à C2</strong>Référence au CECRL</div><div class="trust-item"><strong>Examens</strong>DELF · DALF · TCF · TEF</div><div class="trust-item"><strong>International</strong>Apprenez où que vous soyez</div></div></div>
+<div class="trust"><div class="container trust-grid"><div class="trust-item"><strong data-i18n="trust.1a">Une pédagogie sur mesure</strong><span data-i18n="trust.1b">Un parcours adapté à vos objectifs</span></div><div class="trust-item"><strong>A1 → C2</strong><span data-i18n="trust.2b">Référence au CECRL</span></div><div class="trust-item"><strong data-i18n="trust.3a">Examens</strong><span>DELF · DALF · TCF · TEF</span></div><div class="trust-item"><strong data-i18n="trust.4a">International</strong><span data-i18n="trust.4b">Apprenez où que vous soyez</span></div></div></div>
 
 <section class="goals" id="cours"><div class="container">
- <div class="section-head reveal"><div><div class="kicker">Nos parcours</div><h2 class="section-title">Un objectif. Un parcours.</h2></div><div class="section-lead">Pas de programme générique : nous construisons votre progression autour de ce que vous voulez réellement accomplir.</div></div>
- <div class="goal-grid">
-  <article class="goal reveal"><span class="number">01</span><h3>Commencer le français</h3><p>Construire des bases solides et progresser avec confiance.</p><span class="arrow">↗</span></article>
-  <article class="goal reveal"><span class="number">02</span><h3>Parler avec aisance</h3><p>Développer votre spontanéité, votre prononciation et votre vocabulaire.</p><span class="arrow">↗</span></article>
-  <article class="goal reveal"><span class="number">03</span><h3>Français professionnel</h3><p>Communiquer avec précision dans vos études et votre carrière.</p><span class="arrow">↗</span></article>
-  <article class="goal reveal"><span class="number">04</span><h3>Préparer un examen</h3><p>Une préparation structurée au DELF, au DALF, au TCF ou au TEF.</p><span class="arrow">↗</span></article>
-  <article class="goal reveal"><span class="number">05</span><h3>Étudier en français</h3><p>Préparer votre mobilité, vos études et votre avenir francophone.</p><span class="arrow">↗</span></article>
-  <article class="goal reveal"><span class="number">06</span><h3>Français sur mesure</h3><p>Un accompagnement personnalisé pour un projet particulier.</p><span class="arrow">↗</span></article>
- </div>
+<div class="section-head reveal"><div><div class="kicker" data-i18n="goals.kicker">Nos parcours</div><h2 class="section-title" data-i18n="goals.title">Un objectif. Un parcours.</h2></div><div class="section-lead" data-i18n="goals.lead">Pas de programme générique : nous construisons votre progression autour de ce que vous voulez réellement accomplir.</div></div>
+<div class="goal-grid">
+<article class="goal reveal" data-path="beginner"><span class="number">01</span><h3 data-i18n="goal.beginner.t">Commencer le français</h3><p data-i18n="goal.beginner.p">Construire des bases solides et progresser avec confiance.</p><span class="arrow">↗</span></article>
+<article class="goal reveal" data-path="conversation"><span class="number">02</span><h3 data-i18n="goal.conversation.t">Parler avec aisance</h3><p data-i18n="goal.conversation.p">Développer votre spontanéité, votre prononciation et votre vocabulaire.</p><span class="arrow">↗</span></article>
+<article class="goal reveal" data-path="professional"><span class="number">03</span><h3 data-i18n="goal.professional.t">Français professionnel</h3><p data-i18n="goal.professional.p">Communiquer avec précision dans vos études et votre carrière.</p><span class="arrow">↗</span></article>
+<article class="goal reveal" data-path="exam"><span class="number">04</span><h3 data-i18n="goal.exam.t">Préparer un examen</h3><p data-i18n="goal.exam.p">Une préparation structurée au DELF, au DALF, au TCF ou au TEF.</p><span class="arrow">↗</span></article>
+<article class="goal reveal" data-path="study"><span class="number">05</span><h3 data-i18n="goal.study.t">Étudier en français</h3><p data-i18n="goal.study.p">Préparer votre mobilité, vos études et votre avenir francophone.</p><span class="arrow">↗</span></article>
+<article class="goal reveal" data-path="custom"><span class="number">06</span><h3 data-i18n="goal.custom.t">Français sur mesure</h3><p data-i18n="goal.custom.p">Un accompagnement personnalisé pour un projet particulier.</p><span class="arrow">↗</span></article>
+</div>
+<div class="recommend" id="recommend"><span id="recommendText"></span><button class="btn btn-primary" id="recommendBtn" data-i18n="recommend.btn">Commencer</button></div>
 </div></section>
 
-<section id="methode"><div class="container method-grid">
- <div class="method-copy reveal"><div class="kicker">Notre méthode</div><h2 class="section-title">Simple dans sa structure. Exigeante dans ses résultats.</h2><p>Une pédagogie humaine et méthodique : vous savez où vous allez, pourquoi vous apprenez et comment mesurer vos progrès.</p><a class="btn btn-primary" href="#contact">Découvrir la méthode&nbsp; →</a></div>
- <div class="steps"><div class="step reveal"><span>01</span><h4>Évaluer</h4><p>Votre niveau, vos objectifs et vos besoins.</p></div><div class="step reveal"><span>02</span><h4>Planifier</h4><p>Un parcours clair, réaliste et personnalisé.</p></div><div class="step reveal"><span>03</span><h4>Pratiquer</h4><p>Des situations authentiques, au-delà des simples exercices.</p></div><div class="step reveal"><span>04</span><h4>Progresser</h4><p>Un suivi régulier et des retours précis.</p></div></div>
-</div></section>
+<section id="methode"><div class="container method-grid"><div class="method-copy reveal"><div class="kicker" data-i18n="method.kicker">Notre méthode</div><h2 class="section-title" data-i18n="method.title">Simple dans sa structure. Exigeante dans ses résultats.</h2><p data-i18n="method.text">Une pédagogie humaine et méthodique : vous savez où vous allez, pourquoi vous apprenez et comment mesurer vos progrès.</p><a class="btn btn-primary" href="#contact" data-i18n="method.cta">Découvrir la méthode →</a></div><div class="steps"><div class="step reveal"><span>01</span><h4 data-i18n="step1.t">Évaluer</h4><p data-i18n="step1.p">Votre niveau, vos objectifs et vos besoins.</p></div><div class="step reveal"><span>02</span><h4 data-i18n="step2.t">Planifier</h4><p data-i18n="step2.p">Un parcours clair, réaliste et personnalisé.</p></div><div class="step reveal"><span>03</span><h4 data-i18n="step3.t">Pratiquer</h4><p data-i18n="step3.p">Des situations authentiques, au-delà des simples exercices.</p></div><div class="step reveal"><span>04</span><h4 data-i18n="step4.t">Progresser</h4><p data-i18n="step4.p">Un suivi régulier et des retours précis.</p></div></div></div></section>
 
-<section class="level"><div class="container"><div class="section-head reveal"><div><div class="kicker">Votre progression</div><h2 class="section-title">De A1 à C2, étape par étape.</h2></div><div class="section-lead">Un cadre reconnu internationalement pour rendre votre progression lisible et motivante.</div></div>
- <div class="levels reveal"><div class="level-pill">A1</div><div class="level-pill">A2</div><div class="level-pill">B1</div><div class="level-pill active">B2</div><div class="level-pill">C1</div><div class="level-pill">C2</div></div>
- <div class="level-note reveal">Vous ne connaissez pas votre niveau ? Faites un premier diagnostic lors de votre prise de contact.</div>
-</div></section>
+<section class="level"><div class="container"><div class="section-head reveal"><div><div class="kicker" data-i18n="level.kicker">Votre progression</div><h2 class="section-title" data-i18n="level.title">De A1 à C2, étape par étape.</h2></div><div class="section-lead" data-i18n="level.lead">Un cadre reconnu internationalement pour rendre votre progression lisible et motivante.</div></div><div class="levels reveal"><button class="level-pill" data-level="A1">A1</button><button class="level-pill" data-level="A2">A2</button><button class="level-pill" data-level="B1">B1</button><button class="level-pill active" data-level="B2">B2</button><button class="level-pill" data-level="C1">C1</button><button class="level-pill" data-level="C2">C2</button></div><div class="level-info" id="levelInfo" aria-live="polite"></div><div class="level-note" data-i18n="level.note">Vous ne connaissez pas votre niveau ? Faites notre mini-diagnostic pour obtenir une première orientation.</div></div></section>
 
-<section id="apropos"><div class="container story">
- <div class="reveal"><img class="story-photo" src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1000&q=85" alt="Enseignante de français dans un cadre professionnel"></div>
- <div class="reveal"><div class="kicker">À propos de l’Institut</div><h2 class="section-title">Le français, avec méthode. L’apprentissage, avec humanité.</h2><p class="quote">« Une langue ne s’apprend pas seulement. Elle se vit, se pratique et ouvre de nouvelles possibilités. »</p><p class="quote-by">Institut Passeport Français · <b>Apprendre aujourd’hui. Aller plus loin demain.</b></p></div>
-</div></section>
+<section id="apropos"><div class="container story"><div class="reveal"><img class="story-photo" src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1000&q=85" alt="Enseignante dans un cadre professionnel" data-i18n-alt="alt.teacher"></div><div class="reveal"><div class="kicker" data-i18n="about.kicker">À propos de l’Institut</div><h2 class="section-title" data-i18n="about.title">Le français, avec méthode. L’apprentissage, avec humanité.</h2><p class="quote" data-i18n="about.quote">« Une langue ne s’apprend pas seulement. Elle se vit, se pratique et ouvre de nouvelles possibilités. »</p><p class="quote-by">Institut Passeport Français · <b data-i18n="about.by">Apprendre aujourd’hui. Aller plus loin demain.</b></p></div></div></section>
 
-<section class="resources" id="ressources"><div class="container"><div class="section-head reveal"><div><div class="kicker">Carnet de route</div><h2 class="section-title">Ressources & culture</h2></div><a class="btn btn-ghost" href="#contact">Voir les ressources&nbsp; →</a></div>
- <div class="resource-grid">
-  <article class="resource reveal"><img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=85" alt="Bibliothèque et livres"><div class="pad"><span class="tag">Apprendre</span><h3>Les 10 habitudes qui accélèrent votre français</h3><p>Des conseils simples pour créer une progression durable entre deux cours.</p></div></article>
-  <article class="resource reveal"><div class="pad" style="min-height:304px;display:flex;flex-direction:column;justify-content:center"><span class="tag">Culture</span><h3>Comprendre la France au-delà des clichés</h3><p>Expressions, usages, références et petits détails qui changent une conversation.</p></div></article>
-  <article class="resource reveal"><div class="pad" style="min-height:304px;display:flex;flex-direction:column;justify-content:center"><span class="tag">Examen</span><h3>Se préparer intelligemment au DELF & DALF</h3><p>Structure, stratégie et pratique ciblée pour arriver prêt le jour J.</p></div></article>
- </div></div></section>
+<section class="resources" id="ressources"><div class="container"><div class="section-head reveal"><div><div class="kicker" data-i18n="resources.kicker">Carnet de route</div><h2 class="section-title" data-i18n="resources.title">Ressources et culture</h2></div><a class="btn btn-ghost" href="#contact" data-i18n="resources.cta">Recevoir les ressources →</a></div><div class="resource-grid"><article class="resource reveal"><img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=85" alt="Bibliothèque et livres" data-i18n-alt="alt.library"><div class="pad"><span class="tag" data-i18n="r1.tag">Apprendre</span><h3 data-i18n="r1.t">Les 10 habitudes qui accélèrent votre français</h3><p data-i18n="r1.p">Des conseils simples pour créer une progression durable entre deux cours.</p></div></article><article class="resource reveal"><div class="pad" style="min-height:304px;display:flex;flex-direction:column;justify-content:center"><span class="tag" data-i18n="r2.tag">Culture</span><h3 data-i18n="r2.t">Comprendre la France au-delà des clichés</h3><p data-i18n="r2.p">Expressions, usages, références et petits détails qui changent une conversation.</p></div></article><article class="resource reveal"><div class="pad" style="min-height:304px;display:flex;flex-direction:column;justify-content:center"><span class="tag" data-i18n="r3.tag">Examen</span><h3 data-i18n="r3.t">Se préparer intelligemment au DELF et DALF</h3><p data-i18n="r3.p">Structure, stratégie et pratique ciblée pour arriver prêt le jour J.</p></div></article></div></div></section>
 
-<section class="cta" id="contact"><div class="container cta-box"><div><h2>Votre français commence ici.</h2><p>Parlez-nous de votre objectif et construisons la prochaine étape.</p></div><button class="btn btn-primary" onclick="openModal()">Commencer mon parcours&nbsp; →</button></div></section>
-</main>
 
-<footer><div class="container footer"><div class="footer-grid">
- <div><img class="footer-logo" src="assets/logo.svg" alt="Institut Passeport Français"><p style="margin-top:15px">Plus qu’une langue, un monde à explorer.</p></div>
- <div><h4>Nos cours</h4><a href="#cours">Français général</a><br><a href="#cours">Conversation</a><br><a href="#cours">Professionnel</a><br><a href="#cours">Examens</a></div>
- <div><h4>L’Institut</h4><a href="#apropos">À propos</a><br><a href="#methode">Notre méthode</a><br><a href="#ressources">Ressources</a><br><a href="#contact">Contact</a></div>
- <div><h4>Contact</h4><p>institutpasseportfrancais@outlook.com</p><p>Cours en ligne · Partout dans le monde</p><p>Lun. – Ven. · 9h00–18h00 (CET)</p></div>
-</div><div class="bottom"><span>© 2026 Institut Passeport Français. Tous droits réservés.</span><span>Politique de confidentialité · Mentions légales · Conditions d’utilisation</span></div></div></footer>
+<section class="goals" id="experience">
+<div class="container">
+  <div class="section-head reveal">
+    <div><div class="kicker" data-i18n="experience.kicker">Votre expérience</div><h2 class="section-title" data-i18n="experience.title">Apprendre le français doit aussi être agréable.</h2></div>
+    <div class="section-lead" data-i18n="experience.lead">Choisissez l’expérience que vous recherchez. Nous vous montrons immédiatement la priorité pédagogique.</div>
+  </div>
 
-<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modal-card"><button class="close" onclick="closeModal()">×</button><h3>Commençons par votre objectif.</h3><p>Quelques informations suffisent pour vous orienter vers le bon parcours.</p><form class="form" onsubmit="submitForm(event)"><input required placeholder="Votre prénom"><input required type="email" placeholder="Votre adresse e-mail"><select required><option value="">Votre objectif principal</option><option>Commencer le français</option><option>Parler avec aisance</option><option>Français professionnel</option><option>Préparer un examen</option><option>Étudier en français</option></select><button class="btn btn-primary" type="submit">Demander mon orientation →</button><div class="success" id="success">Merci. Votre demande est prête à être envoyée à l’Institut.</div></form></div></div>
+  <div class="ipf-lovebar" role="group" aria-label="Learning preference">
+    <strong data-i18n="experience.question">Comment aimeriez-vous vous sentir en français ?</strong>
+    <button class="ipf-pill" type="button" data-feel="confident" data-i18n="experience.confident">Confiant</button>
+    <button class="ipf-pill" type="button" data-feel="natural" data-i18n="experience.natural">Naturel</button>
+    <button class="ipf-pill" type="button" data-feel="professional" data-i18n="experience.professional">Professionnel</button>
+    <button class="ipf-pill" type="button" data-feel="curious" data-i18n="experience.curious">Curieux</button>
+    <div style="flex-basis:100%"><div class="ipf-progress" aria-hidden="true"><span id="ipfProgress"></span></div></div>
+  </div>
+
+  <div class="ipf-journey" aria-label="French learning journey">
+    <button class="ipf-step active" type="button" data-journey="start"><small>01</small><h3 data-i18n="journey.start.t">Trouver votre point de départ</h3><p data-i18n="journey.start.p">Nous partons de votre niveau réel et transformons votre situation en prochaine étape claire.</p></button>
+    <button class="ipf-step" type="button" data-journey="path"><small>02</small><h3 data-i18n="journey.path.t">Choisir votre destination</h3><p data-i18n="journey.path.p">Voyage, travail, études, examens ou conversation : votre objectif guide votre parcours.</p></button>
+    <button class="ipf-step" type="button" data-journey="grow"><small>03</small><h3 data-i18n="journey.grow.t">Faire du français le vôtre</h3><p data-i18n="journey.grow.p">Pratiquez jusqu’à ce que le français devienne une langue que vous utilisez, appréciez et continuez à développer.</p></button>
+  </div>
+  <div class="ipf-result" id="ipfJourneyResult" aria-live="polite"><strong data-i18n="journey.start.resultTitle">Commencez avec clarté.</strong> <span data-i18n="journey.start.result">Une courte orientation peut transformer « Je veux apprendre le français » en un plan concret et motivant.</span></div>
+</div>
+</section>
+
+<section class="cta" id="contact"><div class="container cta-box"><div><h2 data-i18n="cta.title">Votre français commence ici.</h2><p data-i18n="cta.text">Parlez-nous de votre objectif et construisons la prochaine étape.</p></div><button class="btn btn-primary" id="ctaBtn" data-i18n="cta.btn">Commencer mon parcours →</button></div></section>
+<noscript><div style="padding:16px;background:#fff3f4;color:#8f1d2d;text-align:center;font-weight:600">Pour une expérience interactive complète, activez JavaScript. Vous pouvez toujours nous contacter par e-mail à institutpasseportfrancais@outlook.com.</div></noscript></main>
+
+<footer><div class="container footer"><div class="footer-grid"><div><a href="#accueil" class="brand footer-brand" aria-label="Institut Passeport Français">
+<img src="https://i.ibb.co/5W1vs2xQ/Elegance-in-Three-Emblems-removebg-preview.png" alt="Logo Institut Passeport Français" data-i18n-alt="alt.logo">
+<span class="brand-copy"><strong>INSTITUT</strong><b>PASSEPORT FRANÇAIS</b><small>PLUS QU’UNE LANGUE, UN MONDE À EXPLORER.</small></span>
+</a><p style="margin-top:15px" data-i18n="footer.tag">Plus qu’une langue, un monde à explorer.</p></div><div><h4 data-i18n="footer.courses">Nos cours</h4><a href="#cours" data-i18n="footer.c1">Français général</a><br><a href="#cours" data-i18n="footer.c2">Conversation</a><br><a href="#cours" data-i18n="footer.c3">Professionnel</a><br><a href="#cours" data-i18n="footer.c4">Examens</a></div><div><h4 data-i18n="footer.institute">L’Institut</h4><a href="#apropos" data-i18n="nav.about">À propos</a><br><a href="#methode" data-i18n="nav.method">Méthode</a><br><a href="#ressources" data-i18n="nav.resources">Ressources</a><br><a href="#contact" data-i18n="nav.contact">Contact</a></div><div><h4 data-i18n="footer.contact">Contact</h4><p>institutpasseportfrancais@outlook.com</p><p data-i18n="footer.online">Cours en ligne · Partout dans le monde</p><p data-i18n="footer.hours">Lun. – Ven. · 9h00–18h00 (CET)</p></div></div><div class="bottom"><span data-i18n="footer.copy">© 2026 Institut Passeport Français. Tous droits réservés.</span><span data-i18n="footer.legal">Politique de confidentialité · Mentions légales · Conditions d’utilisation</span></div></div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalText"><div class="modal-card"><button class="close" id="closeModal" type="button" aria-label="Close">×</button><h3 id="modalTitle" data-i18n="modal.title">Commençons par votre objectif.</h3><p id="modalText" data-i18n="modal.text">Quelques informations suffisent pour vous orienter vers le bon parcours.</p><form class="form" id="contactForm" novalidate>
+<div><label for="name" data-i18n="form.name">Prénom <span class="required-mark" aria-hidden="true">*</span></label><input id="name" name="name" required minlength="2" maxlength="80" autocomplete="given-name" aria-required="true"></div>
+<div><label for="email" data-i18n="form.email">Adresse e-mail <span class="required-mark" aria-hidden="true">*</span></label><input id="email" name="email" type="email" required maxlength="160" autocomplete="email" aria-required="true"></div>
+<div><label for="objective" data-i18n="form.objective">Objectif principal <span class="required-mark" aria-hidden="true">*</span></label><select id="objective" name="objective" required aria-required="true"><option value="" data-i18n="form.choose">Choisissez une option</option><option value="beginner" data-i18n="goal.beginner.t">Commencer le français</option><option value="conversation" data-i18n="goal.conversation.t">Parler avec aisance</option><option value="professional" data-i18n="goal.professional.t">Français professionnel</option><option value="exam" data-i18n="goal.exam.t">Préparer un examen</option><option value="study" data-i18n="goal.study.t">Étudier en français</option><option value="custom" data-i18n="goal.custom.t">Français sur mesure</option></select></div>
+<div><label for="message" data-i18n="form.message">Votre message <span class="optional-mark" data-i18n="form.optional">(facultatif)</span></label><textarea id="message" name="message" rows="4" maxlength="1200" autocomplete="off" style="width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;outline:none;resize:vertical;font:inherit"></textarea></div>
+<div class="form-error" id="formError" role="alert" aria-live="assertive"></div>
+<button class="btn btn-primary" type="submit" data-i18n="form.submit">Demander mon orientation →</button>
+<div class="success" id="success" aria-live="polite" data-i18n="form.success">Merci. Votre application e-mail va s’ouvrir avec le message déjà préparé. Il vous suffit de cliquer sur Envoyer.</div>
+</form>
+<div class="quiz"><div class="quiz-q" data-i18n="quiz.q">Mini-diagnostic : choisissez la phrase qui vous ressemble.</div><div class="quiz-options"><button type="button" data-score="1">Je débute ou je connais seulement quelques mots.</button><button type="button" data-score="2">Je comprends des phrases simples et peux me présenter.</button><button type="button" data-score="3">Je peux parler de sujets familiers avec quelques hésitations.</button><button type="button" data-score="4">Je peux tenir une conversation assez fluide sur de nombreux sujets.</button><button type="button" data-score="5">Je m’exprime avec précision et nuance.</button></div><div class="quiz-result" id="quizResult" aria-live="polite"></div></div>
+</div></div>
+
 <script>
-const modal=document.getElementById('modal');
-function openModal(){modal.classList.add('show')}
-function closeModal(){modal.classList.remove('show')}
-function submitForm(e){e.preventDefault();document.getElementById('success').style.display='block'}
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
-document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.links a').forEach(x=>x.classList.remove('active'));a.classList.add('active')}));
-document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-lang]').forEach(x=>x.classList.remove('active'));b.classList.add('active'); if(b.dataset.lang!=='fr') alert('La version '+b.dataset.lang.toUpperCase()+' sera disponible dans la prochaine étape. La structure trilingue est déjà prête.')}));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+(function(){
+'use strict';
+document.documentElement.classList.add('js');
+
+const T={
+fr:{"alt.logo":"Logo Institut Passeport Français","alt.paris":"Paris et la Tour Eiffel","alt.teacher":"Enseignante dans un cadre professionnel","alt.library":"Bibliothèque et livres","title":"Institut Passeport Français — Plus qu’une langue, un monde à explorer.","experience.confidentTitle":"Construisez votre confiance.","experience.confidentText":"Nous privilégions la prise de parole, les structures utiles et les petites réussites qui rendent le français plus naturel.","experience.naturalTitle":"Rendez votre français naturel.","experience.naturalText":"Nous travaillons le rythme, l’écoute et les expressions de la vie réelle pour que vous parliez avec plus de spontanéité.","experience.professionalTitle":"Donnez une dimension professionnelle à votre français.","experience.professionalText":"Nous ciblons les réunions, les écrits, les présentations et la communication internationale.","experience.curiousTitle":"Apprenez avec curiosité.","experience.curiousText":"Nous ouvrons le parcours à la culture, à la conversation et au monde francophone.","journey.path.resultTitle":"Choisissez une destination.","journey.path.result":"Votre objectif devient le fil conducteur de votre vocabulaire, de votre pratique et de votre rythme.","journey.grow.resultTitle":"Grandissez dans la vraie vie.","journey.grow.result":"Le but n’est pas le français parfait dès le premier jour, mais un français que vous pouvez réellement utiliser et continuer à améliorer.",
+"top.students":"Étudiants","top.business":"Entreprises","top.faq":"FAQ","experience.kicker":"Votre expérience","experience.title":"Apprendre le français doit aussi être agréable.","experience.lead":"Choisissez l’expérience que vous recherchez. Nous vous montrons immédiatement la priorité pédagogique.","experience.question":"Comment aimeriez-vous vous sentir en français ?","experience.confident":"Confiant","experience.natural":"Naturel","experience.professional":"Professionnel","experience.curious":"Curieux","journey.start.t":"Trouver votre point de départ","journey.start.p":"Nous partons de votre niveau réel et transformons votre situation en prochaine étape claire.","journey.path.t":"Choisir votre destination","journey.path.p":"Voyage, travail, études, examens ou conversation : votre objectif guide votre parcours.","journey.grow.t":"Faire du français le vôtre","journey.grow.p":"Pratiquez jusqu’à ce que le français devienne une langue que vous utilisez, appréciez et continuez à développer.","journey.start.resultTitle":"Commencez avec clarté.","journey.start.result":"Une courte orientation peut transformer « Je veux apprendre le français » en un plan concret et motivant.","form.message":"Votre message","form.optional":"(facultatif)","form.error":"Veuillez vérifier les champs obligatoires avant de continuer.","form.mailIntro":"Bonjour Institut Passeport Français,","form.mailName":"Je m’appelle","form.mailEmail":"Mon adresse e-mail","form.mailObjective":"Mon objectif","form.mailMessage":"Mon message","form.mailClosing":"Je souhaite recevoir des informations sur mon parcours de français.\n\nMerci.",top:"Plus qu’une langue, un monde à explorer.", "nav.home":"Accueil","nav.about":"À propos","nav.courses":"Nos cours","nav.method":"Méthode","nav.resources":"Ressources","nav.contact":"Contact","nav.start":"Commencer",
+"hero.eyebrow":"Langue · Culture · Opportunités","hero.title":"Votre passeport vers <em>le français.</em>","hero.text":"Apprenez le français avec une approche claire, élégante et personnalisée — de votre premier mot jusqu’à la maîtrise.","hero.cta1":"Découvrir les cours →","hero.cta2":"Quel est mon niveau ?","hero.micro1":"A1 → C2","hero.micro2":"Cours en ligne","hero.micro3":"FR · EN · RU","seal":"Français · Culture · Avenir",
+"trust.1a":"Une pédagogie sur mesure","trust.1b":"Un parcours adapté à vos objectifs","trust.2b":"Référence au CECRL","trust.3a":"Examens","trust.4a":"International","trust.4b":"Apprenez où que vous soyez",
+"goals.kicker":"Nos parcours","goals.title":"Un objectif. Un parcours.","goals.lead":"Pas de programme générique : nous construisons votre progression autour de ce que vous voulez réellement accomplir.",
+"goal.beginner.t":"Commencer le français","goal.beginner.p":"Construire des bases solides et progresser avec confiance.","goal.conversation.t":"Parler avec aisance","goal.conversation.p":"Développer votre spontanéité, votre prononciation et votre vocabulaire.","goal.professional.t":"Français professionnel","goal.professional.p":"Communiquer avec précision dans vos études et votre carrière.","goal.exam.t":"Préparer un examen","goal.exam.p":"Une préparation structurée au DELF, au DALF, au TCF ou au TEF.","goal.study.t":"Étudier en français","goal.study.p":"Préparer votre mobilité, vos études et votre avenir francophone.","goal.custom.t":"Français sur mesure","goal.custom.p":"Un accompagnement personnalisé pour un projet particulier.",
+"recommend.btn":"Commencer","recommend.text":"Nous vous recommandons : {x}.",
+"method.kicker":"Notre méthode","method.title":"Simple dans sa structure. Exigeante dans ses résultats.","method.text":"Une pédagogie humaine et méthodique : vous savez où vous allez, pourquoi vous apprenez et comment mesurer vos progrès.","method.cta":"Découvrir la méthode →",
+"step1.t":"Évaluer","step1.p":"Votre niveau, vos objectifs et vos besoins.","step2.t":"Planifier","step2.p":"Un parcours clair, réaliste et personnalisé.","step3.t":"Pratiquer","step3.p":"Des situations authentiques, au-delà des simples exercices.","step4.t":"Progresser","step4.p":"Un suivi régulier et des retours précis.",
+"level.kicker":"Votre progression","level.title":"De A1 à C2, étape par étape.","level.lead":"Un cadre reconnu internationalement pour rendre votre progression lisible et motivante.","level.note":"Vous ne connaissez pas votre niveau ? Faites notre mini-diagnostic pour obtenir une première orientation.",
+"about.kicker":"À propos de l’Institut","about.title":"Le français, avec méthode. L’apprentissage, avec humanité.","about.quote":"« Une langue ne s’apprend pas seulement. Elle se vit, se pratique et ouvre de nouvelles possibilités. »","about.by":"Apprendre aujourd’hui. Aller plus loin demain.",
+"resources.kicker":"Carnet de route","resources.title":"Ressources et culture","resources.cta":"Recevoir les ressources →","r1.tag":"Apprendre","r1.t":"Les 10 habitudes qui accélèrent votre français","r1.p":"Des conseils simples pour créer une progression durable entre deux cours.","r2.tag":"Culture","r2.t":"Comprendre la France au-delà des clichés","r2.p":"Expressions, usages, références et petits détails qui changent une conversation.","r3.tag":"Examen","r3.t":"Se préparer intelligemment au DELF et DALF","r3.p":"Structure, stratégie et pratique ciblée pour arriver prêt le jour J.",
+"cta.title":"Votre français commence ici.","cta.text":"Parlez-nous de votre objectif et construisons la prochaine étape.","cta.btn":"Commencer mon parcours →",
+"footer.tag":"Plus qu’une langue, un monde à explorer.","footer.courses":"Nos cours","footer.c1":"Français général","footer.c2":"Conversation","footer.c3":"Professionnel","footer.c4":"Examens","footer.institute":"L’Institut","footer.contact":"Contact","footer.online":"Cours en ligne · Partout dans le monde","footer.hours":"Lun. – Ven. · 9h00–18h00 (CET)","footer.copy":"© 2026 Institut Passeport Français. Tous droits réservés.","footer.legal":"Politique de confidentialité · Mentions légales · Conditions d’utilisation",
+"modal.title":"Commençons par votre objectif.","modal.text":"Quelques informations suffisent pour vous orienter vers le bon parcours.","form.name":"Prénom","form.email":"Adresse e-mail","form.objective":"Objectif principal","form.choose":"Choisissez une option","form.submit":"Demander mon orientation →","form.success":"Merci. Votre application e-mail va s’ouvrir avec le message déjà préparé. Il vous suffit de cliquer sur Envoyer.",
+"quiz.q":"Mini-diagnostic : choisissez la phrase qui vous ressemble.","quiz.result":"Votre première orientation : niveau {x}. Nous confirmerons votre niveau lors d’un échange.",
+levels:{A1:"Débutant · comprendre et utiliser des expressions très simples",A2:"Élémentaire · communiquer dans des situations courantes",B1:"Intermédiaire · raconter, expliquer et interagir avec autonomie",B2:"Avancé · argumenter et communiquer avec aisance",C1:"Autonome · comprendre et s’exprimer avec précision",C2:"Maîtrise · utiliser la langue avec nuance et grande précision"},
+paths:{beginner:"Commencer le français",conversation:"Parler avec aisance",professional:"Français professionnel",exam:"Préparer un examen",study:"Étudier en français",custom:"Français sur mesure"}
+},
+en:{"alt.logo":"Institut Passeport Français logo","alt.paris":"Paris and the Eiffel Tower","alt.teacher":"Teacher in a professional setting","alt.library":"Library and books","title":"Institut Passeport Français — More than a language, a world to explore.","experience.confidentTitle":"Build your confidence.","experience.confidentText":"We focus on speaking, useful structures and small wins that make French feel more natural.","experience.naturalTitle":"Make your French feel natural.","experience.naturalText":"We work on rhythm, listening and real-life expressions so you can speak more spontaneously.","experience.professionalTitle":"Give your French a professional edge.","experience.professionalText":"We target meetings, writing, presentations and international communication.","experience.curiousTitle":"Learn with curiosity.","experience.curiousText":"We bring culture, conversation and the French-speaking world into your learning path.","journey.path.resultTitle":"Choose a destination.","journey.path.result":"Your goal becomes the thread connecting your vocabulary, practice and pace.","journey.grow.resultTitle":"Grow through real life.","journey.grow.result":"The goal is not perfect French on day one, but French you can actually use and keep improving.",
+"top.students":"Students","top.business":"Businesses","top.faq":"FAQ","experience.kicker":"Your experience","experience.title":"Learning French should feel good, too.","experience.lead":"Choose the experience you want. We will show you the teaching priority that fits it.","experience.question":"How would you like to feel in French?","experience.confident":"Confident","experience.natural":"Natural","experience.professional":"Professional","experience.curious":"Curious","journey.start.t":"Find your starting point","journey.start.p":"We start from your real level and turn your situation into a clear next step.","journey.path.t":"Choose your destination","journey.path.p":"Travel, work, studies, exams or conversation: your goal shapes your pathway.","journey.grow.t":"Make French yours","journey.grow.p":"Practice until French becomes a language you use, enjoy and keep developing.","journey.start.resultTitle":"Start with clarity.","journey.start.result":"A short orientation can turn “I want to learn French” into a concrete, motivating plan.","form.message":"Your message","form.optional":"(optional)","form.error":"Please check the required fields before continuing.","form.mailIntro":"Hello Institut Passeport Français,","form.mailName":"My name is","form.mailEmail":"My email address","form.mailObjective":"My goal","form.mailMessage":"My message","form.mailClosing":"I would like to receive information about my French learning pathway.\n\nThank you.",top:"More than a language, a world to explore.","nav.home":"Home","nav.about":"About","nav.courses":"Courses","nav.method":"Method","nav.resources":"Resources","nav.contact":"Contact","nav.start":"Get started",
+"hero.eyebrow":"Language · Culture · Opportunities","hero.title":"Your passport to <em>French.</em>","hero.text":"Learn French through a clear, elegant and personalized approach — from your first words to confident mastery.","hero.cta1":"Explore courses →","hero.cta2":"What is my level?","hero.micro1":"A1 → C2","hero.micro2":"Online courses","hero.micro3":"FR · EN · RU","seal":"French · Culture · Future",
+"trust.1a":"Personalized learning","trust.1b":"A path built around your goals","trust.2b":"CEFR reference","trust.3a":"Exams","trust.4a":"International","trust.4b":"Learn wherever you are",
+"goals.kicker":"Our pathways","goals.title":"One goal. One pathway.","goals.lead":"No generic program: we build your progress around what you actually want to achieve.",
+"goal.beginner.t":"Start French","goal.beginner.p":"Build strong foundations and progress with confidence.","goal.conversation.t":"Speak with ease","goal.conversation.p":"Develop spontaneity, pronunciation and practical vocabulary.","goal.professional.t":"Professional French","goal.professional.p":"Communicate precisely for your studies and career.","goal.exam.t":"Prepare for an exam","goal.exam.p":"Structured preparation for DELF, DALF, TCF or TEF.","goal.study.t":"Study in French","goal.study.p":"Prepare for mobility, studies and your French-speaking future.","goal.custom.t":"French, tailored to you","goal.custom.p":"Personalized support for a specific project.",
+"recommend.btn":"Get started","recommend.text":"We recommend: {x}.",
+"method.kicker":"Our method","method.title":"Simple in structure. Demanding in results.","method.text":"A human, methodical approach: know where you are going, why you are learning and how to measure progress.","method.cta":"Discover the method →",
+"step1.t":"Assess","step1.p":"Your level, goals and needs.","step2.t":"Plan","step2.p":"A clear, realistic and personalized pathway.","step3.t":"Practice","step3.p":"Authentic situations beyond simple exercises.","step4.t":"Progress","step4.p":"Regular follow-up and precise feedback.",
+"level.kicker":"Your progression","level.title":"From A1 to C2, step by step.","level.lead":"An internationally recognized framework that makes your progress clear and motivating.","level.note":"Not sure of your level? Take our mini-assessment for a first orientation.",
+"about.kicker":"About the Institute","about.title":"French with method. Learning with humanity.","about.quote":"“A language is not only learned. It is lived, practiced and used to open new possibilities.”","about.by":"Learn today. Go further tomorrow.",
+"resources.kicker":"Field notes","resources.title":"Resources et culture","resources.cta":"Get the resources →","r1.tag":"Learn","r1.t":"10 habits that can accelerate your French","r1.p":"Simple ideas for creating lasting progress between lessons.","r2.tag":"Culture","r2.t":"Understanding France beyond the clichés","r2.p":"Expressions, customs, references and small details that change a conversation.","r3.tag":"Exam","r3.t":"Prepare intelligently for DELF et DALF","r3.p":"Structure, strategy and targeted practice for exam day.",
+"cta.title":"Your French starts here.","cta.text":"Tell us about your goal and let’s build the next step.","cta.btn":"Start my pathway →",
+"footer.tag":"More than a language, a world to explore.","footer.courses":"Courses","footer.c1":"General French","footer.c2":"Conversation","footer.c3":"Professional","footer.c4":"Exams","footer.institute":"The Institute","footer.contact":"Contact","footer.online":"Online courses · Worldwide","footer.hours":"Mon. – Fri. · 9:00–18:00 (CET)","footer.copy":"© 2026 Institut Passeport Français. All rights reserved.","footer.legal":"Privacy policy · Legal notice · Terms of use",
+"modal.title":"Let’s start with your goal.","modal.text":"A few details are enough to guide you toward the right pathway.","form.name":"First name","form.email":"Email address","form.objective":"Main goal","form.choose":"Choose an option","form.submit":"Request my orientation →","form.success":"Thank you. Your email app will open with the message already prepared. Just click Send.",
+"quiz.q":"Mini-assessment: choose the sentence that best describes you.","quiz.result":"Your first orientation: {x}. We will confirm your level during a conversation.",
+levels:{A1:"Beginner · understand and use very simple expressions",A2:"Elementary · communicate in common situations",B1:"Intermediate · explain, narrate and interact independently",B2:"Upper-intermediate · argue and communicate with ease",C1:"Advanced · understand and express yourself precisely",C2:"Mastery · use the language with nuance and precision"},
+paths:{beginner:"Start French",conversation:"Speak with ease",professional:"Professional French",exam:"Prepare for an exam",study:"Study in French",custom:"French, tailored to you"}
+},
+ru:{"alt.logo":"Логотип Institut Passeport Français","alt.paris":"Париж и Эйфелева башня","alt.teacher":"Преподаватель в профессиональной обстановке","alt.library":"Библиотека и книги","title":"Institut Passeport Français — Больше, чем язык, целый мир для открытий.","experience.confidentTitle":"Укрепляйте уверенность.","experience.confidentText":"Мы сосредоточимся на разговорной практике, полезных конструкциях и небольших победах, которые делают французский естественнее.","experience.naturalTitle":"Говорите естественно.","experience.naturalText":"Мы работаем над ритмом, пониманием на слух и живыми выражениями, чтобы вы говорили свободнее.","experience.professionalTitle":"Сделайте французский профессиональным инструментом.","experience.professionalText":"Мы уделяем внимание встречам, письму, презентациям и международному общению.","experience.curiousTitle":"Учитесь с интересом.","experience.curiousText":"Мы соединяем обучение с культурой, разговором и франкоязычным миром.","journey.path.resultTitle":"Выберите цель.","journey.path.result":"Ваша цель станет ориентиром для лексики, практики и темпа.","journey.grow.resultTitle":"Растите через реальную жизнь.","journey.grow.result":"Цель — не идеальный французский с первого дня, а язык, которым вы действительно можете пользоваться и продолжать развивать.",
+"top.students":"Студенты","top.business":"Компании","top.faq":"FAQ","experience.kicker":"Ваш опыт","experience.title":"Изучение французского должно приносить удовольствие.","experience.lead":"Выберите ощущение, которого хотите достичь. Мы сразу покажем подходящий педагогический приоритет.","experience.question":"Как вы хотите чувствовать себя во французском?","experience.confident":"Уверенно","experience.natural":"Естественно","experience.professional":"Профессионально","experience.curious":"С интересом","journey.start.t":"Определить точку старта","journey.start.p":"Мы начинаем с вашего реального уровня и превращаем его в понятный следующий шаг.","journey.path.t":"Выбрать цель","journey.path.p":"Путешествия, работа, учёба, экзамены или разговорная практика: цель определяет маршрут.","journey.grow.t":"Сделать французский своим","journey.grow.p":"Практикуйтесь, пока французский не станет языком, которым вы пользуетесь, наслаждаетесь и продолжаете развивать.","journey.start.resultTitle":"Начните с ясности.","journey.start.result":"Короткая консультация превращает «Я хочу выучить французский» в конкретный и мотивирующий план.","form.message":"Ваше сообщение","form.optional":"(необязательно)","form.error":"Пожалуйста, проверьте обязательные поля перед продолжением.","form.mailIntro":"Здравствуйте, Institut Passeport Français,","form.mailName":"Меня зовут","form.mailEmail":"Мой адрес электронной почты","form.mailObjective":"Моя цель","form.mailMessage":"Моё сообщение","form.mailClosing":"Я хочу получить информацию о моём пути изучения французского.\n\nСпасибо.",top:"Больше, чем язык — целый мир для открытий.","nav.home":"Главная","nav.about":"Об институте","nav.courses":"Курсы","nav.method":"Методика","nav.resources":"Ресурсы","nav.contact":"Контакты","nav.start":"Начать",
+"hero.eyebrow":"Язык · Культура · Возможности","hero.title":"Ваш паспорт в <em>мир французского.</em>","hero.text":"Изучайте французский по ясной, современной и персональной программе — от первых слов до уверенного владения.","hero.cta1":"Посмотреть курсы →","hero.cta2":"Определить уровень","hero.micro1":"A1 → C2","hero.micro2":"Онлайн-курсы","hero.micro3":"FR · EN · RU","seal":"Французский · Культура · Будущее",
+"trust.1a":"Персональный подход","trust.1b":"Программа под ваши цели","trust.2b":"Шкала CEFR","trust.3a":"Экзамены","trust.4a":"Для всего мира","trust.4b":"Учитесь где угодно",
+"goals.kicker":"Наши направления","goals.title":"Одна цель. Один путь.","goals.lead":"Никаких универсальных программ: мы строим обучение вокруг того, чего вы действительно хотите достичь.",
+"goal.beginner.t":"Начать изучать французский","goal.beginner.p":"Создать прочную базу и уверенно двигаться вперёд.","goal.conversation.t":"Свободно говорить","goal.conversation.p":"Развивать спонтанность, произношение и практическую лексику.","goal.professional.t":"Французский для работы","goal.professional.p":"Точно общаться в учёбе и профессиональной среде.","goal.exam.t":"Подготовиться к экзамену","goal.exam.p":"Структурированная подготовка к DELF, DALF, TCF или TEF.","goal.study.t":"Учиться на французском","goal.study.p":"Подготовиться к учёбе, переезду и франкоязычной среде.","goal.custom.t":"Французский под вашу цель","goal.custom.p":"Персональная программа для конкретного проекта.",
+"recommend.btn":"Начать","recommend.text":"Мы рекомендуем: {x}.",
+"method.kicker":"Наша методика","method.title":"Простая структура. Высокие требования к результату.","method.text":"Человечный и системный подход: вы понимаете цель, логику обучения и способы измерить прогресс.","method.cta":"Узнать о методике →",
+"step1.t":"Оценить","step1.p":"Ваш уровень, цели и потребности.","step2.t":"Спланировать","step2.p":"Понятный и персональный маршрут обучения.","step3.t":"Практиковаться","step3.p":"Живые ситуации, а не только упражнения.","step4.t":"Прогрессировать","step4.p":"Регулярная обратная связь и контроль прогресса.",
+"level.kicker":"Ваш прогресс","level.title":"От A1 до C2, шаг за шагом.","level.lead":"Международная система, которая делает прогресс понятным и мотивирующим.","level.note":"Не знаете свой уровень? Пройдите мини-тест для первой рекомендации.",
+"about.kicker":"Об институте","about.title":"Французский — с методикой. Обучение — с человеческим подходом.","about.quote":"«Язык не просто изучают. На нём живут, говорят и открывают новые возможности.»","about.by":"Учитесь сегодня. Двигайтесь дальше завтра.",
+"resources.kicker":"Маршрут обучения","resources.title":"Ресурсы и культура","resources.cta":"Получить ресурсы →","r1.tag":"Обучение","r1.t":"10 привычек, которые ускорят ваш французский","r1.p":"Простые советы для устойчивого прогресса между занятиями.","r2.tag":"Культура","r2.t":"Понять Францию без стереотипов","r2.p":"Выражения, нормы общения и культурные детали, которые меняют разговор.","r3.tag":"Экзамен","r3.t":"Умная подготовка к DELF и DALF","r3.p":"Структура, стратегия и целевая практика перед экзаменом.",
+"cta.title":"Ваш французский начинается здесь.","cta.text":"Расскажите о своей цели — вместе определим следующий шаг.","cta.btn":"Начать обучение →",
+"footer.tag":"Больше, чем язык — целый мир для открытий.","footer.courses":"Курсы","footer.c1":"Общий французский","footer.c2":"Разговорная практика","footer.c3":"Профессиональный","footer.c4":"Экзамены","footer.institute":"Институт","footer.contact":"Контакты","footer.online":"Онлайн-занятия · Весь мир","footer.hours":"Пн. – Пт. · 9:00–18:00 (CET)","footer.copy":"© 2026 Institut Passeport Français. Все права защищены.","footer.legal":"Конфиденциальность · Правовая информация · Условия использования",
+"modal.title":"Начнём с вашей цели.","modal.text":"Несколько деталей помогут подобрать подходящее направление.","form.name":"Имя","form.email":"Электронная почта","form.objective":"Главная цель","form.choose":"Выберите вариант","form.submit":"Получить рекомендацию →","form.success":"Спасибо. Откроется ваше почтовое приложение с уже подготовленным письмом. Просто нажмите «Отправить».",
+"quiz.q":"Мини-тест: выберите утверждение, которое лучше всего вас описывает.","quiz.result":"Ваша предварительная рекомендация: уровень {x}. Точный уровень мы подтвердим во время общения.",
+levels:{A1:"Начальный · понимать и использовать очень простые выражения",A2:"Элементарный · общаться в повседневных ситуациях",B1:"Средний · объяснять, рассказывать и общаться самостоятельно",B2:"Выше среднего · аргументировать и уверенно общаться",C1:"Продвинутый · точно понимать и выражать сложные мысли",C2:"Владение · использовать язык тонко и очень точно"},
+paths:{beginner:"Начать французский",conversation:"Свободно говорить",professional:"Французский для работы",exam:"Подготовиться к экзамену",study:"Учиться на французском",custom:"Французский под вашу цель"}
+}};;
+let currentLang='fr';
+let selectedPath=null;
+let quizScore=0;
+let lastFocus=null;
+
+const $=id=>document.getElementById(id);
+const modal=$('modal'), form=$('contactForm'), success=$('success'), formError=$('formError');
+const menuBtn=$('menuBtn'), mobileMenu=$('mobileMenu'), closeModal=$('closeModal');
+const startBtn=$('startBtn'), ctaBtn=$('ctaBtn'), levelBtn=$('levelBtn'), mobileStart=$('mobileStart');
+
+function t(key){return (T[currentLang]&&T[currentLang][key])||T.fr[key]||key}
+
+function setLanguage(lang){
+  if(!T[lang]) return;
+  currentLang=lang;
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.dataset.i18n, val=t(key);
+    if(val!==key) el.textContent=val;
+  });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el=>{ const key=el.dataset.i18nAlt; const val=t(key); if(val!==key) el.alt=val; });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    const key=el.dataset.i18nHtml, val=t(key);
+    if(val!==key) el.innerHTML=val;
+  });
+  updateLevelInfo(document.querySelector('.level-pill.active')?.dataset.level||'B2');
+  if($('recommend')?.classList.contains('show') && selectedPath) showRecommendation(selectedPath);
+  if($('quizResult')?.style.display==='block' && quizScore) showQuizResult(quizScore);
+  updateJourneyResult(document.querySelector('.ipf-step.active')?.dataset.journey||'start');
+  document.title = T[currentLang].title || document.title;
+}
+
+document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
+
+function openModal(){
+  lastFocus=document.activeElement;
+  modal.classList.add('show');
+  document.body.classList.add('modal-open');
+  mobileMenu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+  formError.classList.remove('show');
+  setTimeout(()=>$('name').focus(),30);
+}
+function closeModalFn(){
+  modal.classList.remove('show');
+  document.body.classList.remove('modal-open');
+  if(lastFocus && document.contains(lastFocus)) lastFocus.focus();
+}
+[startBtn,ctaBtn,levelBtn,mobileStart,$('recommendBtn')].forEach(b=>b&&b.addEventListener('click',()=>openModal()));
+closeModal.addEventListener('click',closeModalFn);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModalFn();});
+document.addEventListener('keydown',e=>{
+  if(!modal.classList.contains('show')) return;
+  if(e.key==='Escape'){e.preventDefault();closeModalFn();return;}
+  if(e.key==='Tab'){
+    const focusable=[...modal.querySelectorAll('button:not([disabled]),input,select,textarea,a[href]')].filter(x=>x.offsetParent!==null);
+    if(!focusable.length) return;
+    const first=focusable[0], last=focusable[focusable.length-1];
+    if(e.shiftKey && document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus();}
+  }
+});
+
+function showFormError(message){
+  formError.textContent=message;
+  formError.classList.add('show');
+}
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  formError.classList.remove('show');
+  success.style.display='none';
+  if(!form.checkValidity()){
+    showFormError(t('form.error'));
+    form.reportValidity();
+    return;
+  }
+  const name=$('name').value.trim();
+  const email=$('email').value.trim();
+  const objectiveKey=$('objective').value;
+  const objectiveLabel=T[currentLang].paths[objectiveKey]||objectiveKey;
+  const message=$('message').value.trim();
+  const subjectText=currentLang==='fr'?'Demande d’orientation — Institut Passeport Français':currentLang==='ru'?'Запрос на консультацию — Institut Passeport Français':'Orientation request — Institut Passeport Français';
+  const bodyText=[
+    t('form.mailIntro'),'',
+    `${t('form.mailName')} : ${name}`,
+    `${t('form.mailEmail')} : ${email}`,
+    `${t('form.mailObjective')} : ${objectiveLabel}`,
+    message ? `\n${t('form.mailMessage')} :\n${message}` : '',
+    '',t('form.mailClosing')
+  ].join('\n');
+  const mailto=`mailto:institutpasseportfrancais@outlook.com?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+  success.style.display='block';
+  success.textContent=t('form.success');
+  setTimeout(()=>{window.location.href=mailto;},150);
+});
+
+menuBtn.addEventListener('click',()=>{
+  const isOpen=mobileMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',String(isOpen));
+  menuBtn.setAttribute('aria-label',isOpen ? (currentLang==='fr'?'Fermer le menu':currentLang==='ru'?'Закрыть меню':'Close menu') : (currentLang==='fr'?'Ouvrir le menu':currentLang==='ru'?'Открыть меню':'Open menu'));
+});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
+mobileStart?.addEventListener('click',()=>mobileMenu.classList.remove('open'));
+
+function showRecommendation(path){
+  selectedPath=path;
+  document.querySelectorAll('.goal').forEach(g=>g.classList.toggle('selected',g.dataset.path===path));
+  $('recommendText').textContent=t('recommend.text').replace('{x}',T[currentLang].paths[path]);
+  $('recommend').classList.add('show');
+}
+document.querySelectorAll('.goal').forEach(g=>g.addEventListener('click',()=>showRecommendation(g.dataset.path)));
+
+function updateLevelInfo(level){
+  const levels=T[currentLang].levels||T.fr.levels;
+  $('levelInfo').textContent=levels[level]||'';
+  document.querySelectorAll('.level-pill').forEach(b=>b.classList.toggle('active',b.dataset.level===level));
+}
+document.querySelectorAll('.level-pill').forEach(b=>b.addEventListener('click',()=>updateLevelInfo(b.dataset.level)));
+updateLevelInfo('B2');
+
+const quizLevels={1:'A1',2:'A2',3:'B1',4:'B2',5:'C1'};
+document.querySelectorAll('.quiz-options button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.quiz-options button').forEach(x=>x.classList.remove('chosen'));
+  b.classList.add('chosen');
+  quizScore=Number(b.dataset.score);
+  showQuizResult(quizScore);
+}));
+function showQuizResult(score){
+  const level=quizLevels[Math.max(1,Math.min(5,Number(score)||1))];
+  $('quizResult').textContent=t('quiz.result').replace('{x}',level);
+  $('quizResult').style.display='block';
+  updateLevelInfo(level);
+}
+
+const journeyCopy={
+  start:['journey.start.resultTitle','journey.start.result'],
+  path:['journey.path.resultTitle','journey.path.result'],
+  grow:['journey.grow.resultTitle','journey.grow.result']
+};
+function updateJourneyResult(key){
+  const pair=journeyCopy[key]||journeyCopy.start;
+  $('ipfJourneyResult').innerHTML=`<strong>${t(pair[0])}</strong> <span>${t(pair[1])}</span>`;
+}
+const journeyFallback={
+  'journey.path.resultTitle':['fr','Choisissez une destination.'],
+  'journey.path.result':['fr','Votre objectif devient le fil conducteur de votre vocabulaire, de votre pratique et de votre rythme.'],
+  'journey.grow.resultTitle':['fr','Grandissez dans la vraie vie.'],
+  'journey.grow.result':['fr','Le but n’est pas le français parfait dès le premier jour, mais un français que vous pouvez réellement utiliser et continuer à améliorer.']
+};
+for(const [k,[lang,val]] of Object.entries(journeyFallback)){
+  for(const l of ['fr','en','ru']) if(!T[l][k]) T[l][k]=l==='fr'?val:(k.endsWith('Title')?(l==='en'?'Choose a destination.':'Выберите цель.'):(l==='en'?'Your goal becomes the thread connecting your vocabulary, practice and pace.':'Ваша цель станет ориентиром для лексики, практики и темпа.'));
+}
+document.querySelectorAll('.ipf-pill').forEach((p,i)=>p.addEventListener('click',()=>{
+  document.querySelectorAll('.ipf-pill').forEach(x=>x.classList.remove('active'));
+  p.classList.add('active');
+  $('ipfProgress').style.width=((i+1)/4*100)+'%';
+  const key='experience.'+p.dataset.feel;
+  const copy={
+    confident:['experience.confidentTitle','experience.confidentText'],
+    natural:['experience.naturalTitle','experience.naturalText'],
+    professional:['experience.professionalTitle','experience.professionalText'],
+    curious:['experience.curiousTitle','experience.curiousText']
+  }[p.dataset.feel];
+  $('ipfJourneyResult').innerHTML=`<strong>${t(copy[0])}</strong> <span>${t(copy[1])}</span>`;
+}));
+document.querySelectorAll('.ipf-step').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.ipf-step').forEach(x=>x.classList.remove('active'));
+  btn.classList.add('active');
+  updateJourneyResult(btn.dataset.journey);
+}));
+
+const io=('IntersectionObserver' in window)?new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+}),{threshold:.08}):null;
+document.querySelectorAll('.reveal').forEach(x=>io?io.observe(x):x.classList.add('in'));
+
+const sections=[...document.querySelectorAll('main section[id]')];
+const navLinks=[...document.querySelectorAll('.links a[href^="#"]')];
+const sectionObserver=('IntersectionObserver' in window)?new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));
+    }
+  });
+},{rootMargin:'-35% 0px -55% 0px',threshold:0}):null;
+if(sectionObserver) sections.forEach(s=>sectionObserver.observe(s));
+
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>{
+  mobileMenu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+}));
+
+setLanguage('fr');
+})();
 </script>
-</body></html>
+
+</body>
+</html>
